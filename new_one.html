@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<select id="first-choice">
+			<option selected value="base">Please Select</option>
+			<option value="filters">filters</option>
+			<option value="algorithms">algorithms</option>
+		</select>
+
+		<br>
+
+		<select id="second-choice">
+			<option>Please choose from above</option>
+		</select>
+		<?php
+echo lalala
+
+$data=array("algorithms"=> array("Naïve Bayes", "Decision Table", "Logistic", "SPegasos", "RepTree", "Simple Logistic", "Support Vector Machine (SVM)"),
+"matrix"=> array("Yes", "No"));
+?>
+		<?php
+
+$("#first-choice").change(function() {
+
+var $dropdown = $(this);
+
+function set_drop(data) {
+
+var key = $dropdown.val();
+var vals = [];
+
+switch(key) {
+case 'filters':
+vals = data.matrix.split(",");
+break;
+case 'algorithms':
+vals = data.algorithms.split(",");
+break;
+case 'base':
+vals = ['Please choose from above'];
+}
+
+var $secondChoice = $("#second-choice");
+$secondChoice.empty();
+$.each(vals, function(index, value) {
+$secondChoice.append("<option>" + value + "</option>");
+});
+};
+});
+
+?>
+	</body>
+</html>

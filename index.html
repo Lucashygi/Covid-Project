@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testing the first example</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css_first.css">
+        <script src="js_first.js"></script>
+
+
+
+        <script>
+            var fullalgoList = {'Naïve Bayes':'naive','Decision Table':'decisionTable',
+                                'Logistic':'logistic','SPegasos':'pegasos',
+                                'RepTree':'repTree','Simple Logistic':'simpleLogistic',
+                                'Support Vector Machine (SVM)':'SVM'};
+            var notFullAlgoList = {'Naïve Bayes':'naive','Decision Table':'decisionTable',
+                                   'Logistic':'logistic',
+                                   'RepTree':'repTree','Simple Logistic':'simpleLogistic',
+                                  };
+            var filterList = {'Normal':'cross_normal','Class Balancer':'cross_classBalancer','SMOTE':'cross_Smote'};
+            var costList = {Yes:'_cost_',No:'_neutral_'};
+
+
+            var algorithm = document.getElementById('algorithm_selected');
+            var filter = document.getElementById('filter_selected');
+            var cost_used = document.getElementById('matrix_selected');
+
+            $( "custom-select" ).select(function() {
+                var hi = document.getElementById('filter_selected').selected;
+                alert(hi);
+                $("div").text(hi.options[hi.selectedIndex].text).show().fadeOut(5000);
+            });
+
+            function present_valid(){
+                if (document.getElementById('filter_selected').value == 'Class Balancer' &&
+                    document.getElementById('matrix_selected').value == 'No')
+                {          
+                    alert("STOP");
+                    document.getElementById("algorithm_selected").removeAttributeNS("SPegasos");
+                    document.getElementById("algorithm_selected").removeAttributeNS("SVM");
+                }
+            }
+
+
+        </script>
+
+
+
+    </head>
+    <body>
+        <div class='container'>
+            <h1>Test</h1>
+            <div class='row' id='filters'>
+                <div class='col-sm-3'>
+                    <h3 class='filter_label'>Filter</h3>
+                </div>
+                <div class='col-sm-9'>
+                    <select class="custom-select" id='filter_selected' onchange="present_valid()">
+                        <option value="Normal" label="Normal">Normal</option>
+                        <option value="Class Balancer" label="Class Balancer">Class Balancer</option>
+                        <option value="SMOTE" label='SMOTE' selected>SMOTE</option>
+                    </select>
+                </div>
+            </div>
+            <div></div>
+            <br>
+            <div class='row' id='matrix'>
+                <div class="col-sm-3">
+                    <h3 class='matrix_label'>Cost Matrix</h3>
+                </div>
+                <div class='col-sm-9'>
+                    <select class="custom-select" id='matrix_selected' onchange="present_valid()">
+                        <option value = "No" label="No" selected>No</option>
+                        <option value = "Yes" label="Yes">Yes</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class='row' id='algorithms'>
+                <div class='col-sm-3'>
+                    <h3 class='algorithm_label'>Algorithm</h3>
+                </div>
+                <div class='col-sm-9'>
+                    <select class="custom-select" id='algorithm_selected' onchange="present_valid()">
+                        <option value="Decision Table" label="Decision Table">Decision Table</option>
+                        <option value="Naive Bayes" label="Naive Bayes">Naïve Bayes</option>
+                        <option value="Logistic" label="Logistis">Logistic</option>        
+                        <option value="RepTree" label="RepTree" selected>RepTree</option>
+                        <option value="Simple Logistic" label="Simple Logistic">Simple Logistic</option>
+                        <option value="SPegasos" label="SPegasos">SPegasos</option>
+                        <option value="SVM" label="SVM">Support Vector Machine (SVM)</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <button type="button" class="btn btn-primary" onclick="showResults()">Select</button>
+            </div>
+            <br>
+            <br>
+            <div class='form-group'>
+                <textarea id='text_area' class='form-control' readonly>
+                </textarea>
+            </div>
+        </div>
+    </body>
+</html>

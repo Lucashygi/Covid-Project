@@ -1,0 +1,93 @@
+
+
+
+
+
+}.container{
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  background-color: azure;
+}
+
+.row{
+  padding-top: 20px;
+  margin-right: 10%;
+}
+}#filters, #algorithms, #matrix{
+  width: 100%;
+  background-color: aliceblue;
+  display: inline-block;
+}
+.filter_label, .algorithm_label, .matrix_label{
+  text-align: start;
+  font-family: sans-serif;
+  display: table-cell;
+}
+#filter_selected, #algorithm_selected, #matrix_selected{
+  font-size: 16px;
+  font-family: sans-serif;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: match-parent;
+  width: 50%;
+}
+#text_area{
+  overflow: auto;
+  margin: auto;
+}
+.btn-primary{
+  margin-left: 15px;
+  background-color: rgb(0, 173, 250);
+  border-color: rgb(0, 10, 255)
+}  
+
+// Select 
+//
+// Replaces the browser default select with a custom one, mostly pulled from
+// http://primercss.io.
+//
+// Includes IE9-specific hacks (noted by ` \9`).
+.custom-select {
+  display: inline-block;
+  max-width: 100%;
+  padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  padding-right: $custom-select-padding-x \9;
+  color: $custom-select-color;
+  vertical-align: middle;
+  background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x center;
+  background-image: none \9;
+  background-size: $custom-select-bg-size;
+  border: $custom-select-border-width solid $custom-select-border-color;
+  @include border-radius($custom-select-border-radius);
+  // Use vendor prefixes as `appearance` isn't part of the CSS spec.
+  -moz-appearance: none;
+  -webkit-appearance: none;&:focus {
+    border-color: $custom-select-focus-border-color;
+    outline: none;
+    @include box-shadow($custom-select-focus-box-shadow);&::-ms-value {
+      // For visual consistency with other platforms/browsers,
+      // supress the default white text on blue background highlight given to
+      // the selected option text when the (still closed) <select> receives focus
+      // in IE and (under certain conditions) Edge.
+      // See https://github.com/twbs/bootstrap/issues/19398.
+        color: $input-color;
+      background-color: $input-bg;
+    }
+  }&:disabled {
+    color: $custom-select-disabled-color;
+    cursor: $cursor-disabled;
+    background-color: $custom-select-disabled-bg;
+  }// Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
+}.custom-select-sm {
+  padding-top: $custom-select-padding-y;
+  padding-bottom: $custom-select-padding-y;
+  font-size: $custom-select-sm-font-size;// &:not([multiple]) {
+    //   height: 26px;
+    //   min-height: 26px;
+    // }
+}
