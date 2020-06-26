@@ -1,0 +1,17 @@
+.container{
+  color: black; 
+  background-color: white;
+}
+
+a {
+  color: black;
+}
+
+body{
+  background-image: url('https://www.centraldeconsultas.med.br/wp-content/uploads/2020/05/logocorona.png');
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: auto;
+}
+
+
+

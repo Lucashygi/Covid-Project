@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Machine Learning Espirito Santo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script type = 'text/jscript'  src="//code.jquery.com/jquery-3.5.1.js"></script>
+        <link rel='stylesheet' href="/css/bootstrap.min.css">
+        <link rel='stylesheet' href="/css/ml_style.css">
+
+    </head>
+    <body>
+        <div id="header">
+        </div>
+        <div class='container' id="content">
+            <h3>Machine Learning in Espírito Santo Deaths</h3>
+
+
+
+            Esta parte é responsável por apresentar a evolução dos resultados de alguns algoritmos de machine learning baseados nos dados do estado do <br> Espírito Santo (Brasil).<br>
+            Apresentando seleções de dados até Março, Abril, Maio e até o dia 19/06/2020.<br>
+            Utilizando apenas valores referentes a condições biologicas e sintomáticas sendo elas:
+            <ul>
+                <li>Age</li>
+                <li>Sex</li>
+                <li>Ethnicity</li>
+                <li>Fever</li>
+                <li>Shortness of breath (Dyspnea)</li>
+                <li>Cough</li>
+                <li>Coryza</li>
+                <li>Sore Throat</li>
+                <li>Diarrhea</li>
+                <li>Headache</li>
+                <li>Lung Diseases</li>
+                <li>Cardio Diseases</li>
+                <li>Kidney Diseases</li>
+                <li>Diabetes Disease</li>
+                <li>Smoking</li>
+                <li>Obesity Disease</li>
+                <li>Confirmed Death</li>                
+            </ul>
+
+
+            Os resultados obtidos foram através de algoritmos e filtros aplicados na ferramenta WEKA, sendo os filtros:
+            <ul>
+                <li>No Filtered</li>
+                <li>Class Balancer</li>
+                <li>SMOTE</li>
+            </ul>
+            No Filtered -> Sem aplicação de filtros. <br>
+            Class Balancer -> Equilibra o peso das classes, tornando-os iguais. <br>
+            SMOTE -> Gera valores da classe minoritária baseados nos valores próximos. (Todos os casos com SMOTE o filtro foi aplicado deixando as classes iguais). <br>
+            <br>
+            Os algoritmos utilizados foram os seguintes:
+
+            <ul>
+                <li>Decision Table</li>
+                <li>Logistic</li>
+                <li>Naïve Bayes</li>
+                <li>Simple Logistic</li>
+                <li>SPegasos</li>
+                <li>Support Vector Machine (SVM)</li>
+                <li>REP Tree</li>
+            </ul>
+            <div class='highlight'>
+                <p>SPegasos and SVM Don't have implementation using Class Balancer and Without a Cost Matrix</p>
+            </div>
+            E as matrizes de custo foram sempre iguais para todas as seleções temporais, sendo elas:
+            <br>
+            <br>
+            <table>
+                <th>No Filtered</th>
+                <th>Matrix</th>
+                <th></th>
+                <tr>
+                    <td>0</td><td>4</td><td><b>No</b></td>
+                </tr>
+                <tr>
+                    <td>50</td><td>-0.5</td><td><b>Yes</b></td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <th>Class Balancer</th>
+                <th>Matrix</th>
+                <th></th>
+                <tr>
+                    <td>0</td><td>4</td><td><b>No</b></td>
+                </tr>
+                <tr>
+                    <td>8</td><td>-0.5</td><td><b>Yes</b></td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <th>SMOTE</th>
+                <th>Matrix</th>
+                <th></th>
+                <tr>
+                    <td>0</td><td>3.2</td><td><b>No</b></td>
+                </tr>
+                <tr>
+                    <td>10.06</td><td>-0.55</td><td><b>Yes</b></td>
+                </tr>
+            </table>
+            <br>
+
+            <P>This part is responsable to present </P>
+        </div>
+        <br />
+
+
+
+    <script type="text/jscript">
+            $("#header").load("header.html");
+    </script>
+    </body>
+
+</html>
