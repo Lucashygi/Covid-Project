@@ -1,0 +1,166 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.SMOTE-C0-K5-P1100.0-S1
+Instances:    264
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                          Class
+Attribute                   Não   Sim
+                          (0.5) (0.5)
+======================================
+FaixaEtaria
+  30 a 39 anos              36.0   3.0
+  50 a 59 anos              26.0 126.0
+  40 a 49 anos              29.0   2.0
+  20 a 29 anos              17.0   1.0
+  60 a 69 anos              15.0   3.0
+  70 a 79 anos               9.0   2.0
+  0 a 4 anos                 2.0   1.0
+  80 a 89 anos               2.0   2.0
+  05 a 9 anos                3.0   1.0
+  10 a 19 anos               3.0   1.0
+  [total]                  142.0 142.0
+
+Sexo
+  F                         62.0   3.0
+  M                         72.0 131.0
+  [total]                  134.0 134.0
+
+RacaCor
+  Ignorado                  91.0 130.0
+  Branca                    17.0   4.0
+  Parda                     19.0   1.0
+  Amarela                    8.0   1.0
+  Preta                      2.0   1.0
+  [total]                  137.0 137.0
+
+Febre
+  Sim                      106.0 130.0
+  Não                       28.0   4.0
+  [total]                  134.0 134.0
+
+DificuldadeRespiratoria
+  Não                       93.0   3.0
+  Sim                       41.0 131.0
+  [total]                  134.0 134.0
+
+Tosse
+  Sim                      104.0 130.0
+  Não                       30.0   4.0
+  [total]                  134.0 134.0
+
+Coriza
+  Sim                       53.0   3.0
+  Não                       81.0 131.0
+  [total]                  134.0 134.0
+
+DorGarganta
+  Não                       81.0 131.0
+  Sim                       53.0   3.0
+  [total]                  134.0 134.0
+
+Diarreia
+  Sim                       18.0   3.0
+  Não                      116.0 131.0
+  [total]                  134.0 134.0
+
+Cefaleia
+  Sim                       55.0  37.0
+  Não                       79.0  97.0
+  [total]                  134.0 134.0
+
+ComorbidadePulmao
+  Não                      129.0 130.0
+  Sim                        4.0   1.0
+  -                          2.0   4.0
+  [total]                  135.0 135.0
+
+ComorbidadeCardio
+  Não                      113.0  94.0
+  Sim                       21.0   4.0
+  -                          1.0  37.0
+  [total]                  135.0 135.0
+
+ComorbidadeRenal
+  Não                      131.0  96.0
+  -                          2.0  37.0
+  Sim                        2.0   2.0
+  [total]                  135.0 135.0
+
+ComorbidadeDiabetes
+  Não                      124.0  96.0
+  Sim                        9.0   2.0
+  -                          2.0  37.0
+  [total]                  135.0 135.0
+
+ComorbidadeTabagismo
+  Não                      132.0 130.0
+  -                          1.0   4.0
+  Sim                        2.0   1.0
+  [total]                  135.0 135.0
+
+ComorbidadeObesidade
+  Não                      130.0 130.0
+  Sim                        4.0   2.0
+  -                          1.0   3.0
+  [total]                  135.0 135.0
+
+FicouInternado
+  Sim                       29.0 131.0
+  Não                       48.0   2.0
+  -                         58.0   2.0
+  [total]                  135.0 135.0
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         254               96.2121 %
+Incorrectly Classified Instances        10                3.7879 %
+Kappa statistic                          0.9242
+Mean absolute error                      0.0451
+Root mean squared error                  0.1909
+Relative absolute error                  9.0178 %
+Root relative squared error             38.1771 %
+Total Number of Instances              264     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,970    0,045    0,955      0,970    0,962      0,924    0,986     0,981     Não
+                 0,955    0,030    0,969      0,955    0,962      0,924    0,986     0,990     Sim
+Weighted Avg.    0,962    0,038    0,962      0,962    0,962      0,924    0,986     0,986     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 128   4 |   a = Não
+   6 126 |   b = Sim
+

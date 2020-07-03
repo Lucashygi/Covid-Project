@@ -1,0 +1,80 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 4.0; 50.0 -0.5]" -S 1 -W weka.classifiers.functions.SimpleLogistic -- -I 0 -M 500 -H 50 -W 0.0
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27
+Instances:    143
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+
+Classifier Model
+SimpleLogistic:
+
+Class Não :
+0.56 + 
+[DificuldadeRespiratoria=Sim] * -0.65 +
+[ComorbidadeCardio=Não] * 0.77 +
+[FicouInternado=Sim] * -1.21
+
+Class Sim :
+-0.56 + 
+[DificuldadeRespiratoria=Sim] * 0.65 +
+[ComorbidadeCardio=Não] * -0.77 +
+[FicouInternado=Sim] * 1.21
+
+
+Cost Matrix
+  0     4   
+ 50    -0.5 
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         115               80.4196 %
+Incorrectly Classified Instances        28               19.5804 %
+Kappa statistic                          0.2121
+Mean absolute error                      0.2795
+Root mean squared error                  0.3876
+Relative absolute error                189.4616 %
+Root relative squared error            145.3346 %
+Total Number of Instances              143     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,826    0,455    0,956      0,826    0,886      0,246    0,663     0,953     Não
+				0,545    0,174    0,207      0,545    0,300      0,246    0,663     0,222     Sim
+Weighted Avg.    0,804    0,433    0,899      0,804    0,841      0,246    0,663     0,896     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 109  23 |   a = Não
+   5   6 |   b = Sim
+

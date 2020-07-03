@@ -1,0 +1,56 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-9-4" -seed 1
+Relation:     MICRODADOS_obitos-weka.filters.unsupervised.attribute.Remove-R1-7,11-weka.filters.unsupervised.attribute.Remove-R17-19-weka.filters.supervised.instance.SMOTE-C0-K100-P2422.9-S1
+Instances:    63930
+Attributes:   17
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 84.99 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       61479               96.1661 %
+Incorrectly Classified Instances      2451                3.8339 %
+Kappa statistic                          0.9233
+Mean absolute error                      0.0383
+Root mean squared error                  0.1958
+Relative absolute error                  7.6678 %
+Root relative squared error             39.1606 %
+Total Number of Instances            63930     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,952    0,029    0,971      0,952    0,961      0,923    0,962     0,948     Não
+                 0,971    0,048    0,953      0,971    0,962      0,923    0,962     0,940     Sim
+Weighted Avg.    0,962    0,038    0,962      0,962    0,962      0,923    0,962     0,944     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 30437  1528 |     a = Não
+   923 31042 |     b = Sim
+

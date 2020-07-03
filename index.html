@@ -1,116 +1,91 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>Testing the first example</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <title>Home</title>
+        <script type = 'text/jscript'  src="js/jquery-3.5.1.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css_first.css">
-        <script src="js_first.js"></script>
+        <link rel='stylesheet' href="/css/bootstrap.min.css">
+        <link rel='stylesheet' href="/css/index_style.css">
 
-
-
-        <script>
-            var fullalgoList = {'Naïve Bayes':'naive','Decision Table':'decisionTable',
-                                'Logistic':'logistic','SPegasos':'pegasos',
-                                'RepTree':'repTree','Simple Logistic':'simpleLogistic',
-                                'Support Vector Machine (SVM)':'SVM'};
-            var notFullAlgoList = {'Naïve Bayes':'naive','Decision Table':'decisionTable',
-                                   'Logistic':'logistic',
-                                   'RepTree':'repTree','Simple Logistic':'simpleLogistic',
-                                  };
-            var filterList = {'Normal':'cross_normal','Class Balancer':'cross_classBalancer','SMOTE':'cross_Smote'};
-            var costList = {Yes:'_cost_',No:'_neutral_'};
-
-
-            var algorithm = document.getElementById('algorithm_selected');
-            var filter = document.getElementById('filter_selected');
-            var cost_used = document.getElementById('matrix_selected');
-
-            $( "custom-select" ).select(function() {
-                var hi = document.getElementById('filter_selected').selected;
-                alert(hi);
-                $("div").text(hi.options[hi.selectedIndex].text).show().fadeOut(5000);
-            });
-
-            function present_valid(){
-                if (document.getElementById('filter_selected').value == 'Class Balancer' &&
-                    document.getElementById('matrix_selected').value == 'No')
-                {          
-                    alert("STOP");
-                    document.getElementById("algorithm_selected").removeAttributeNS("SPegasos");
-                    document.getElementById("algorithm_selected").removeAttributeNS("SVM");
-                }
-            }
-
-
-        </script>
-
-
-
+        <meta charset='ISO-8859-1'/>
     </head>
     <body>
-        <div class='container'>
-            <h1>Test</h1>
-            <div class='row' id='filters'>
-                <div class='col-sm-3'>
-                    <h3 class='filter_label'>Filter</h3>
-                </div>
-                <div class='col-sm-9'>
-                    <select class="custom-select" id='filter_selected' onchange="present_valid()">
-                        <option value="Normal" label="Normal">Normal</option>
-                        <option value="Class Balancer" label="Class Balancer">Class Balancer</option>
-                        <option value="SMOTE" label='SMOTE' selected>SMOTE</option>
-                    </select>
-                </div>
-            </div>
-            <div></div>
-            <br>
-            <div class='row' id='matrix'>
-                <div class="col-sm-3">
-                    <h3 class='matrix_label'>Cost Matrix</h3>
-                </div>
-                <div class='col-sm-9'>
-                    <select class="custom-select" id='matrix_selected' onchange="present_valid()">
-                        <option value = "No" label="No" selected>No</option>
-                        <option value = "Yes" label="Yes">Yes</option>
-                    </select>
-                </div>
-            </div>
-            <br>
-            <div class='row' id='algorithms'>
-                <div class='col-sm-3'>
-                    <h3 class='algorithm_label'>Algorithm</h3>
-                </div>
-                <div class='col-sm-9'>
-                    <select class="custom-select" id='algorithm_selected' onchange="present_valid()">
-                        <option value="Decision Table" label="Decision Table">Decision Table</option>
-                        <option value="Naive Bayes" label="Naive Bayes">Naïve Bayes</option>
-                        <option value="Logistic" label="Logistis">Logistic</option>        
-                        <option value="RepTree" label="RepTree" selected>RepTree</option>
-                        <option value="Simple Logistic" label="Simple Logistic">Simple Logistic</option>
-                        <option value="SPegasos" label="SPegasos">SPegasos</option>
-                        <option value="SVM" label="SVM">Support Vector Machine (SVM)</option>
-                    </select>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-                <button type="button" class="btn btn-primary" onclick="showResults()">Select</button>
-            </div>
-            <br>
-            <br>
-            <div class='form-group'>
-                <textarea id='text_area' class='form-control' readonly>
-                </textarea>
-            </div>
+
+        <div id="header">
         </div>
+        <br />
+        <div class='container' id='content'>
+
+            <div id='covid-description'>
+                <h3>Covid-19</h3>
+                <p>Covid-19 is the disease caused by the new coronavirus Sars-Cov-2, discovered in end of 2019.<br>
+                    The acronym means: "Coronavirus Disease 2019".
+                </p>
+                <p></p>
+            </div>
+            <div id='espirito-santo-description'>
+                <h3>Espírito Santo</h3>
+                <p>The state used to apply some <b>Machine Learning algorithms</b>, is one state among 26 others in Brazil<br>
+                    This choice was based because this state had good data, with substancial features and 
+                </p>
+            </div>
+
+            <div id="Description">
+                <h3>Brazil</h3>
+                <p>This project intents to present the brazilian situation about Covid-19, the latests outbreak in World.</p>
+            </div>
+
+            <br><br><br>
+            <div class='JohnHopkings'>
+                <iframe width="650" height="400" frameborder="0" scrolling="no" 
+                        marginheight="0" marginwidth="0" title="2019-nCoV" 
+                        src="//arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"
+                        ></iframe>
+                <br>
+                <cite>Credits: Johns Hopkins Center for Systems Science and Engineering</cite>
+            </div>
+            <footer>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <figure>
+                            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Instituto_Federal_de_Santa_Catarina_-_Marca_Vertical_2015.svg/1200px-Instituto_Federal_de_Santa_Catarina_-_Marca_Vertical_2015.svg.png' id='ifscLogo'>
+                        </figure>
+                    </div>
+                    <div class='col-sm-2'></div>
+                    <div class='col-sm-4'>
+                        <figure>
+                            <img src ='https://i0.wp.com/www.eurashe.eu/wp-content/uploads/2014/10/university-deusto_logo.jpg?fit=688%2C324&ssl=1' id='deustoLogo'>
+                        </figure>
+                    </div>
+                    <figcaption>Project developed between Instituto Federal de Santa Catarina and Universidad de Deusto.</figcaption>
+                </div>
+            </footer>
+            <br />
+        </div>
+        <script type="text/jscript">
+            $("#header").load("header.html");
+        </script>
     </body>
+    <script type="text/javascript" class="__web-inspector-hide-shortcut__">
+        loadDoc("header.html", "#header");
+
+        function loadDoc(html_file, target)
+        {
+            var el = document.querySelector(target);
+
+            //Se o elemento não existir então não requisita
+            if (!el) return;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", html_file, true);
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300){
+                    el.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(null);
+        }
+    </script>
 </html>

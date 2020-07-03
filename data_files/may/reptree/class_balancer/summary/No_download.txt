@@ -1,0 +1,32 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+Relation:     MICRODADOS_obitos_may-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    19332
+Attributes:   18
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       16372.6888          84.6922 %
+Incorrectly Classified Instances      2959.3112          15.3078 %
+Kappa statistic                          0.6938
+Mean absolute error                      0.218 
+Root mean squared error                  0.3547
+Relative absolute error                 43.6055 %
+Root relative squared error             70.9303 %
+Total Number of Instances            19332     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,862    0,168    0,837      0,862    0,849      0,694    0,881     0,812     Não
+                 0,832    0,138    0,857      0,832    0,845      0,694    0,881     0,887     Sim
+Weighted Avg.    0,847    0,153    0,847      0,847    0,847      0,694    0,881     0,849     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 8327.45 1338.55 |       a = Não
+ 1620.76 8045.24 |       b = Sim
+

@@ -1,0 +1,32 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.SMOTE-C0-K5-P1100.0-S1
+Instances:    264
+Attributes:   18
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         243               92.0455 %
+Incorrectly Classified Instances        21                7.9545 %
+Kappa statistic                          0.8409
+Mean absolute error                      0.1062
+Root mean squared error                  0.2385
+Relative absolute error                 21.2455 %
+Root relative squared error             47.7051 %
+Total Number of Instances              264     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,917    0,076    0,924      0,917    0,920      0,841    0,969     0,968     Não
+                 0,924    0,083    0,917      0,924    0,921      0,841    0,969     0,964     Sim
+Weighted Avg.    0,920    0,080    0,920      0,920    0,920      0,841    0,969     0,966     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 121  11 |   a = Não
+  10 122 |   b = Sim
+

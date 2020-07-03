@@ -1,14 +1,23 @@
 <html>
     <head>
         <title>Machine Learning Espirito Santo</title>
+        <script type = 'text/jscript'  src="js/jquery-3.5.1.js"></script>
+        <script src="js/machine.js"></script> 
+        <script src="js/autoresize.jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+        <script src="js/split_text_to_lines_jspdf.js"></script>
+        <!--        <script src='js/jspdf.js'></script>-->
+        <link rel='stylesheet' type="text/css" href="css/bootstrap.min.css">
+        <link rel='stylesheet' type="text/css" href="css/ml_style.css">
+        <link rel="stylesheet" type="text/css" href='css/selection.css'>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script type = 'text/jscript'  src="//code.jquery.com/jquery-3.5.1.js"></script>
-        <link rel='stylesheet' href="/css/bootstrap.min.css">
-        <link rel='stylesheet' href="/css/ml_style.css">
-
+        <style id="__web-inspector-hide-shortcut-style__">
+            .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+            {
+                visibility: hidden !important;
+            }
+        </style>
+        <meta charset="ISO-8859-1">
     </head>
     <body>
         <div id="header">
@@ -16,11 +25,24 @@
         <div class='container' id="content">
             <h3>Machine Learning in Espírito Santo Deaths</h3>
 
-
-
-            Esta parte é responsável por apresentar a evolução dos resultados de alguns algoritmos de machine learning baseados nos dados do estado do <br> Espírito Santo (Brasil).<br>
-            Apresentando seleções de dados até Março, Abril, Maio e até o dia 19/06/2020.<br>
-            Utilizando apenas valores referentes a condições biologicas e sintomáticas sendo elas:
+            <p>
+                This part is responsable for presenting the evolution in some results of Machine Learning algorithms based in the state of Espírito Santo (Brasil) datasets. 
+            </p>
+            <!--
+<p>
+Esta parte é responsável por apresentar a evolução dos resultados de alguns algoritmos de machine learning baseados nos dados do estado do <br> Espírito Santo (Brasil).<br>
+</p>
+-->
+            <p>
+                Presenting data selection until March, April, May and until the day June 16, 2020. <br>
+                Using only values referring to biological and symptomatic conditions as presented below:
+            </p>
+            <!--
+<p>
+Apresentando seleções de dados até Março, Abril, Maio e até o dia 19/06/2020.<br>
+Utilizando apenas valores referentes a condições biologicas e sintomáticas sendo elas:
+</p>
+-->
             <ul>
                 <li>Age</li>
                 <li>Sex</li>
@@ -41,18 +63,41 @@
                 <li>Confirmed Death</li>                
             </ul>
 
-
-            Os resultados obtidos foram através de algoritmos e filtros aplicados na ferramenta WEKA, sendo os filtros:
+            <p>
+                The results were found through algorithms and filters applied in WEKA Workbench.<br>
+                The filter were:
+            </p>
+            <!--
+<p>
+Os resultados obtidos foram através de algoritmos e filtros aplicados na ferramenta WEKA, sendo os filtros:
+</p>
+-->
             <ul>
                 <li>No Filtered</li>
                 <li>Class Balancer</li>
                 <li>SMOTE</li>
             </ul>
-            No Filtered -> Sem aplicação de filtros. <br>
-            Class Balancer -> Equilibra o peso das classes, tornando-os iguais. <br>
-            SMOTE -> Gera valores da classe minoritária baseados nos valores próximos. (Todos os casos com SMOTE o filtro foi aplicado deixando as classes iguais). <br>
-            <br>
-            Os algoritmos utilizados foram os seguintes:
+            <p>
+                <u>No filtered</u> -> With no filters.<br>
+                <u>Class Balancer</u> -> It balances the weight of the classes, turning them equal.<br>
+                <u>SMOTE</u> -> Build values in the lower class based in neighboors values. (Every cases using SMOTE the filter was applied setting both classes equal).<br>
+            </p>
+            <!--
+<p>
+No Filtered -> Sem aplicação de filtros. <br>
+Class Balancer -> Equilibra o peso das classes, tornando-os iguais. <br>
+SMOTE -> Gera valores da classe minoritária baseados nos valores próximos. (Todos os casos com SMOTE o filtro foi aplicado deixando as classes iguais). <br>
+<br>
+</p>
+-->
+            <p>
+                The algorithms used were the following:
+            </p>
+            <!--
+<p>
+Os algoritmos utilizados foram os seguintes:
+</p>
+-->
 
             <ul>
                 <li>Decision Table</li>
@@ -64,9 +109,16 @@
                 <li>REP Tree</li>
             </ul>
             <div class='highlight'>
-                <p>SPegasos and SVM Don't have implementation using Class Balancer and Without a Cost Matrix</p>
+                <p><b>SPegasos and SVM Don't have implementation using Class Balancer Without a Cost Matrix</b></p>
             </div>
-            E as matrizes de custo foram sempre iguais para todas as seleções temporais, sendo elas:
+            <p>
+                The Cost Matrices were always the same for all temporal selections, being:
+            </p>
+            <!--
+<p>
+E as matrizes de custo foram sempre iguais para todas as seleções temporais, sendo elas:
+</p>
+-->
             <br>
             <br>
             <table>
@@ -104,17 +156,115 @@
                     <td>10.06</td><td>-0.55</td><td><b>Yes</b></td>
                 </tr>
             </table>
+            <br />
             <br>
+            <br>
+            <div class="form-group" id='selection-group'>
 
-            <P>This part is responsable to present </P>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <h3 class='date_label'>Date</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id='date_selected'form='selection'>
+                            <option value="March" label="March">March</option>
+                            <option value="April" label="April">April</option>
+                            <option value="May" label='May'>May</option>
+                            <option value="June" label="June" selected>June</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <h3 class='algorithm_label'>Algorithm</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id="algorithm_selected" form='selection'>
+                            <option value="Decision Table" label="Decision Table">Decision Table</option>
+                            <option value="Naive Bayes" label="Naive Bayes">Naïve Bayes</option>
+                            <option value="Logistic" label="Logistic">Logistic</option>        
+                            <option value="RepTree" label="RepTree" selected>RepTree</option>
+                            <option value="Simple Logistic" label="Simple Logistic">Simple Logistic</option>
+                            <option value="SPegasos" label="SPegasos">SPegasos</option>
+                            <option value="SVM" label="SVM">Support Vector Machine (SVM)</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <h3 class='filter_label'>Filter</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id='filter_selected' form='selection'>
+                            <option value="Normal" label="Normal">Normal</option>
+                            <option value="Class Balancer" label="Class Balancer">Class Balancer</option>
+                            <option value="SMOTE" label="SMOTE" selected>SMOTE</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class="col-sm-3">
+                        <h3 class='matrix_label'>Cost Matrix</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id='matrix_selected'>
+                            <option value = "No" label="No" selected>No</option>
+                            <option value = "Yes" label="Yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class="col-sm-3">
+                        <h3 class='presenting_label'>Presenting type</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id="presenting_selected">
+                            <option value = "Summary" label="Summary" selected>Summary</option>
+                            <option value = "Advanced" label="Advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <button type="button" class="btn btn-primary" onclick="showResults()" >Select</button>
+                </div>
+                <br>
+                <br>
+                <div class='form-group' contenteditable>
+                    <textarea id='text_area' class='form-control' readonly placeholder="Select What You Want" accept-charset="ISO-8859-1" >
+                    </textarea>
+                </div>
+                <br>
+                <div class="row" id='pdf-button-row'>
+                    <button type="submit" class="btn btn-primary" id="downloadButton" onclick="downloadFile()">Download</button>
+                </div>
+            </div>
+
         </div>
-        <br />
 
-
-
-    <script type="text/jscript">
-            $("#header").load("header.html");
-    </script>
     </body>
+    <script type="text/javascript" class="__web-inspector-hide-shortcut__">
+        loadDoc("header.html", "#header");
 
+        function loadDoc(html_file, target)
+        {
+            var el = document.querySelector(target);
+
+            //Se o elemento não existir então não requisita
+            if (!el) return;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", html_file, true);
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300){
+                    el.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(null);
+        }
+    </script>
 </html>

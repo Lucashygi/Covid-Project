@@ -1,0 +1,39 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 3.2; 10.06 -0.5]" -S 1 -W weka.classifiers.functions.SPegasos -- -F 0 -L 1.0E-4 -E 500
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.SMOTE-C0-K5-P1501.5-S1
+Instances:    7334
+Attributes:   18
+
+Cost Matrix
+  0     3.2 
+ 10.06 -0.5 
+
+
+Time taken to build model: 0.65 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6806               92.8007 %
+Incorrectly Classified Instances       528                7.1993 %
+Kappa statistic                          0.856 
+Mean absolute error                      0.072 
+Root mean squared error                  0.2683
+Relative absolute error                 14.3987 %
+Root relative squared error             53.6632 %
+Total Number of Instances             7334     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,867    0,011    0,988      0,867    0,923      0,862    0,928     0,923     Não
+                 0,989    0,133    0,881      0,989    0,932      0,862    0,928     0,877     Sim
+Weighted Avg.    0,928    0,072    0,934      0,928    0,928      0,862    0,928     0,900     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3179  488 |    a = Não
+   40 3627 |    b = Sim
+

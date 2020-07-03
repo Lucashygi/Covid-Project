@@ -1,0 +1,379 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+Relation:     MICRODADOS_obitos_may-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    19332
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+REPTree
+============
+
+FaixaEtaria = 30 a 39 anos
+|   FicouInternado = Sim
+|   |   DificuldadeRespiratoria = Não : Sim (37.44/17.92) [44.05/14.76]
+|   |   DificuldadeRespiratoria = Sim
+|   |   |   ComorbidadeTabagismo = Não
+|   |   |   |   RacaCor = Ignorado : Sim (24.27/4.74) [10.82/1.05]
+|   |   |   |   RacaCor = Branca
+|   |   |   |   |   Tosse = Sim : Sim (35.09/5.8) [2.11/2.11]
+|   |   |   |   |   Tosse = Não : Não (2.63/0) [0.53/0]
+|   |   |   |   |   Tosse = - : Sim (0/0) [0/0]
+|   |   |   |   RacaCor = Parda
+|   |   |   |   |   DorGarganta = Não : Sim (62.8/4.22) [11.87/2.11]
+|   |   |   |   |   DorGarganta = Sim : Não (2.63/0) [0.53/0]
+|   |   |   |   |   DorGarganta = - : Sim (0/0) [0/0]
+|   |   |   |   RacaCor = Amarela : Não (0.53/0) [1.58/0]
+|   |   |   |   RacaCor = Preta : Sim (11.34/1.58) [9.76/0]
+|   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   ComorbidadeTabagismo = - : Sim (9.76/0) [0/0]
+|   |   |   ComorbidadeTabagismo = Sim : Não (1.05/0) [0/0]
+|   |   DificuldadeRespiratoria = - : Sim (0/0) [0/0]
+|   FicouInternado = Não : Não (1276.2/68.35) [630.33/39.05]
+|   FicouInternado = - : Não (488.55/19.53) [240.58/9.76]
+FaixaEtaria = 50 a 59 anos
+|   DificuldadeRespiratoria = Não
+|   |   Cefaleia = Sim : Não (388.7/29.29) [254.9/68.35]
+|   |   Cefaleia = Não
+|   |   |   FicouInternado = Sim : Sim (91.53/23.19) [56.72/7.9]
+|   |   |   FicouInternado = Não : Não (344.27/97.64) [155.77/29.29]
+|   |   |   FicouInternado = - : Não (164.2/29.29) [56.91/0]
+|   |   Cefaleia = - : Não (0/0) [0/0]
+|   DificuldadeRespiratoria = Sim
+|   |   FicouInternado = Sim : Sim (353.54/41.11) [223.48/18.44]
+|   |   FicouInternado = Não : Sim (386.6/171.8) [284.58/99.07]
+|   |   FicouInternado = -
+|   |   |   RacaCor = Ignorado : Não (8.43/0) [5.27/0]
+|   |   |   RacaCor = Branca
+|   |   |   |   Tosse = Sim : Não (11.07/0) [5.8/0]
+|   |   |   |   Tosse = Não : Sim (21.64/2.11) [1.05/1.05]
+|   |   |   |   Tosse = - : Não (0/0) [0/0]
+|   |   |   RacaCor = Parda
+|   |   |   |   Febre = Sim
+|   |   |   |   |   ComorbidadeObesidade = Não
+|   |   |   |   |   |   ComorbidadeDiabetes = Não : Não (6.32/0) [5.27/0]
+|   |   |   |   |   |   ComorbidadeDiabetes = Sim : Sim (11.34/1.58) [0.53/0.53]
+|   |   |   |   |   |   ComorbidadeDiabetes = - : Não (0/0) [0/0]
+|   |   |   |   |   ComorbidadeObesidade = Sim : Sim (10.29/0.53) [0/0]
+|   |   |   |   |   ComorbidadeObesidade = - : Não (0.53/0) [0/0]
+|   |   |   |   Febre = Não : Não (4.22/0) [2.63/0]
+|   |   |   |   Febre = - : Não (0/0) [0/0]
+|   |   |   RacaCor = Amarela
+|   |   |   |   DorGarganta = Não : Não (2.11/0) [1.58/0]
+|   |   |   |   DorGarganta = Sim : Sim (9.76/0) [1.05/1.05]
+|   |   |   |   DorGarganta = - : Sim (0/0) [0/0]
+|   |   |   RacaCor = Preta : Não (2.11/0) [1.05/0]
+|   |   |   RacaCor = Indigena : Não (0.53/0) [0/0]
+|   DificuldadeRespiratoria = - : Não (13.17/0) [6.32/0]
+FaixaEtaria = 40 a 49 anos
+|   FicouInternado = Sim
+|   |   Diarreia = Sim : Não (9.49/0) [5.27/0]
+|   |   Diarreia = Não
+|   |   |   ComorbidadeCardio = Não
+|   |   |   |   Coriza = Sim : Não (26.1/9.76) [6.32/0]
+|   |   |   |   Coriza = Não
+|   |   |   |   |   RacaCor = Ignorado : Sim (45.91/6.85) [2.11/2.11]
+|   |   |   |   |   RacaCor = Branca
+|   |   |   |   |   |   Febre = Sim
+|   |   |   |   |   |   |   Sexo = F : Não (2.63/0) [1.58/0]
+|   |   |   |   |   |   |   Sexo = M : Sim (13.98/4.22) [11.87/2.11]
+|   |   |   |   |   |   |   Sexo = I : Sim (0/0) [0/0]
+|   |   |   |   |   |   Febre = Não : Sim (21.64/2.11) [0/0]
+|   |   |   |   |   |   Febre = - : Sim (0/0) [0/0]
+|   |   |   |   |   RacaCor = Parda : Sim (25.85/6.32) [15.03/5.27]
+|   |   |   |   |   RacaCor = Amarela : Sim (31.4/2.11) [0/0]
+|   |   |   |   |   RacaCor = Preta : Sim (11.34/1.58) [0.53/0.53]
+|   |   |   |   |   RacaCor = Indigena : Sim (9.76/0) [0/0]
+|   |   |   |   Coriza = - : Sim (9.76/0) [0/0]
+|   |   |   ComorbidadeCardio = Sim
+|   |   |   |   RacaCor = Ignorado
+|   |   |   |   |   Cefaleia = Sim : Não (2.11/0) [3.16/0]
+|   |   |   |   |   Cefaleia = Não : Sim (10.29/0.53) [11.34/1.58]
+|   |   |   |   |   Cefaleia = - : Sim (0/0) [0/0]
+|   |   |   |   RacaCor = Branca : Sim (31.93/2.63) [2.63/2.63]
+|   |   |   |   RacaCor = Parda : Sim (62.8/4.22) [12.93/3.16]
+|   |   |   |   RacaCor = Amarela : Sim (21.11/1.58) [0.53/0.53]
+|   |   |   |   RacaCor = Preta : Não (1.58/0) [2.11/0]
+|   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   ComorbidadeCardio = - : Sim (19.53/0) [0/0]
+|   |   Diarreia = - : Não (0.53/0) [0/0]
+|   FicouInternado = Não
+|   |   ComorbidadeDiabetes = Não
+|   |   |   DificuldadeRespiratoria = Não : Não (822.71/58.58) [410.02/19.53]
+|   |   |   DificuldadeRespiratoria = Sim
+|   |   |   |   RacaCor = Ignorado
+|   |   |   |   |   Cefaleia = Sim : Não (23.71/0) [9.49/0]
+|   |   |   |   |   Cefaleia = Não
+|   |   |   |   |   |   Sexo = F : Não (11.07/0) [2.63/0]
+|   |   |   |   |   |   Sexo = M : Sim (24.27/4.74) [14.51/4.74]
+|   |   |   |   |   |   Sexo = I : Sim (0/0) [0/0]
+|   |   |   |   |   Cefaleia = - : Não (0/0) [0/0]
+|   |   |   |   RacaCor = Branca : Não (84.6/9.76) [56.67/9.76]
+|   |   |   |   RacaCor = Parda : Não (139.99/48.82) [82.52/29.29]
+|   |   |   |   RacaCor = Amarela : Não (21.36/9.76) [19.25/9.76]
+|   |   |   |   RacaCor = Preta : Não (30.32/9.76) [9.49/0]
+|   |   |   |   RacaCor = Indigena : Não (1.05/0) [0/0]
+|   |   |   DificuldadeRespiratoria = - : Não (0/0) [0/0]
+|   |   ComorbidadeDiabetes = Sim
+|   |   |   RacaCor = Ignorado : Não (12.12/0) [2.63/0]
+|   |   |   RacaCor = Branca
+|   |   |   |   Coriza = Sim : Não (14.23/0) [3.69/0]
+|   |   |   |   Coriza = Não
+|   |   |   |   |   Tosse = Sim : Sim (37.2/7.9) [4.22/4.22]
+|   |   |   |   |   Tosse = Não : Não (2.11/0) [2.11/0]
+|   |   |   |   |   Tosse = - : Sim (0/0) [0/0]
+|   |   |   |   Coriza = - : Não (0/0) [0/0]
+|   |   |   RacaCor = Parda : Não (46.93/19.53) [20.03/0]
+|   |   |   RacaCor = Amarela
+|   |   |   |   DificuldadeRespiratoria = Não : Não (3.16/0) [1.05/0]
+|   |   |   |   DificuldadeRespiratoria = Sim : Sim (32.98/3.69) [0.53/0.53]
+|   |   |   |   DificuldadeRespiratoria = - : Sim (0/0) [0/0]
+|   |   |   RacaCor = Preta : Sim (20.3/10.54) [15.56/5.8]
+|   |   |   RacaCor = Indigena : Não (0/0) [0/0]
+|   |   ComorbidadeDiabetes = - : Não (0.53/0) [0.53/0]
+|   FicouInternado = -
+|   |   DificuldadeRespiratoria = Não : Não (306.71/0) [142.56/9.76]
+|   |   DificuldadeRespiratoria = Sim
+|   |   |   Sexo = F : Não (28.46/0) [22.66/0]
+|   |   |   Sexo = M
+|   |   |   |   RacaCor = Ignorado : Sim (3.69/3.69) [11.34/1.58]
+|   |   |   |   RacaCor = Branca : Não (4.74/0) [3.16/0]
+|   |   |   |   RacaCor = Parda : Sim (19.25/9.49) [26.91/7.38]
+|   |   |   |   RacaCor = Amarela : Não (1.58/0) [1.05/0]
+|   |   |   |   RacaCor = Preta : Não (2.11/0) [1.58/0]
+|   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   Sexo = I : Não (0/0) [0/0]
+|   |   DificuldadeRespiratoria = - : Não (12.12/0) [4.74/0]
+FaixaEtaria = 20 a 29 anos
+|   FicouInternado = Sim : Sim (40.36/11.07) [29.01/9.49]
+|   FicouInternado = Não : Não (698.81/19.53) [364.18/19.53]
+|   FicouInternado = - : Não (220.81/0) [120.96/9.76]
+FaixaEtaria = 60 a 69 anos
+|   FicouInternado = Sim
+|   |   DificuldadeRespiratoria = Não
+|   |   |   Tosse = Sim
+|   |   |   |   ComorbidadeRenal = Não
+|   |   |   |   |   RacaCor = Ignorado : Não (19.78/9.76) [5.8/0]
+|   |   |   |   |   RacaCor = Branca : Sim (62.52/13.7) [15.03/5.27]
+|   |   |   |   |   RacaCor = Parda : Sim (49.07/10.01) [61.74/3.16]
+|   |   |   |   |   RacaCor = Amarela : Não (1.05/0) [1.05/0]
+|   |   |   |   |   RacaCor = Preta
+|   |   |   |   |   |   Sexo = F : Não (2.11/0) [0.53/0]
+|   |   |   |   |   |   Sexo = M : Sim (20.05/0.53) [11.34/1.58]
+|   |   |   |   |   |   Sexo = I : Sim (0/0) [0/0]
+|   |   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   |   ComorbidadeRenal = - : Sim (0/0) [0/0]
+|   |   |   |   ComorbidadeRenal = Sim : Sim (19.53/0) [2.11/2.11]
+|   |   |   Tosse = Não : Sim (125.07/7.9) [32.98/3.69]
+|   |   |   Tosse = - : Sim (0/0) [0/0]
+|   |   DificuldadeRespiratoria = Sim : Sim (539.86/32.15) [224.01/18.97]
+|   |   DificuldadeRespiratoria = - : Sim (0/0) [0/0]
+|   FicouInternado = Não
+|   |   DificuldadeRespiratoria = Não
+|   |   |   Tosse = Sim
+|   |   |   |   Coriza = Sim : Não (84.32/0) [68.81/29.29]
+|   |   |   |   Coriza = Não : Não (218.29/78.11) [88.56/19.53]
+|   |   |   |   Coriza = - : Não (0/0) [0/0]
+|   |   |   Tosse = Não
+|   |   |   |   DorGarganta = Não
+|   |   |   |   |   Diarreia = Sim : Não (8.96/0) [12.4/9.76]
+|   |   |   |   |   Diarreia = Não
+|   |   |   |   |   |   ComorbidadeDiabetes = Não
+|   |   |   |   |   |   |   RacaCor = Ignorado : Não (21.88/9.76) [4.74/0]
+|   |   |   |   |   |   |   RacaCor = Branca : Não (22.94/9.76) [7.9/0]
+|   |   |   |   |   |   |   RacaCor = Parda : Sim (45.1/15.81) [18.72/8.96]
+|   |   |   |   |   |   |   RacaCor = Amarela : Não (1.58/0) [1.58/0]
+|   |   |   |   |   |   |   RacaCor = Preta : Sim (12.4/2.63) [1.05/1.05]
+|   |   |   |   |   |   |   RacaCor = Indigena : Não (0/0) [0/0]
+|   |   |   |   |   |   ComorbidadeDiabetes = Sim
+|   |   |   |   |   |   |   RacaCor = Ignorado : Não (2.63/0) [0/0]
+|   |   |   |   |   |   |   RacaCor = Branca : Sim (22.69/3.16) [2.63/2.63]
+|   |   |   |   |   |   |   RacaCor = Parda : Sim (22.69/3.16) [21.11/1.58]
+|   |   |   |   |   |   |   RacaCor = Amarela : Sim (9.76/0) [1.58/1.58]
+|   |   |   |   |   |   |   RacaCor = Preta : Sim (0/0) [0/0]
+|   |   |   |   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   |   |   |   ComorbidadeDiabetes = - : Sim (0/0) [0/0]
+|   |   |   |   |   Diarreia = - : Sim (0/0) [0/0]
+|   |   |   |   DorGarganta = Sim : Não (15.81/0) [7.9/0]
+|   |   |   |   DorGarganta = - : Sim (0/0) [0/0]
+|   |   |   Tosse = - : Não (0/0) [0/0]
+|   |   DificuldadeRespiratoria = Sim : Sim (424.44/102.24) [268.03/53.23]
+|   |   DificuldadeRespiratoria = - : Sim (0.53/0.53) [9.76/0]
+|   FicouInternado = -
+|   |   DificuldadeRespiratoria = Não
+|   |   |   Sexo = F : Não (62.46/9.76) [23.19/0]
+|   |   |   Sexo = M
+|   |   |   |   RacaCor = Ignorado
+|   |   |   |   |   Febre = Sim : Não (6.32/0) [3.16/0]
+|   |   |   |   |   Febre = Não : Sim (28.49/8.96) [5.27/5.27]
+|   |   |   |   |   Febre = - : Não (0/0) [0/0]
+|   |   |   |   RacaCor = Branca : Sim (51.18/12.12) [21.36/11.59]
+|   |   |   |   RacaCor = Parda
+|   |   |   |   |   ComorbidadeDiabetes = Não
+|   |   |   |   |   |   Febre = Sim : Não (4.22/0) [5.27/0]
+|   |   |   |   |   |   Febre = Não : Sim (11.87/2.11) [4.74/4.74]
+|   |   |   |   |   |   Febre = - : Não (0/0) [0/0]
+|   |   |   |   |   ComorbidadeDiabetes = Sim : Sim (20.58/1.05) [0.53/0.53]
+|   |   |   |   |   ComorbidadeDiabetes = - : Sim (0/0) [0/0]
+|   |   |   |   RacaCor = Amarela : Não (1.05/0) [2.11/0]
+|   |   |   |   RacaCor = Preta : Sim (2.11/2.11) [10.82/1.05]
+|   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   Sexo = I : Não (0.53/0) [0/0]
+|   |   DificuldadeRespiratoria = Sim : Sim (132.17/24.77) [48.01/8.96]
+|   |   DificuldadeRespiratoria = - : Não (4.22/0) [2.11/0]
+FaixaEtaria = 70 a 79 anos
+|   DificuldadeRespiratoria = Não
+|   |   FicouInternado = Sim
+|   |   |   ComorbidadePulmao = Não
+|   |   |   |   RacaCor = Ignorado
+|   |   |   |   |   Coriza = Sim : Não (2.11/0) [1.58/0]
+|   |   |   |   |   Coriza = Não : Sim (43.27/4.22) [34.03/4.74]
+|   |   |   |   |   Coriza = - : Sim (0/0) [0/0]
+|   |   |   |   RacaCor = Branca
+|   |   |   |   |   Sexo = F : Não (5.27/0) [2.11/0]
+|   |   |   |   |   Sexo = M : Sim (35.09/5.8) [31.4/2.11]
+|   |   |   |   |   Sexo = I : Sim (0/0) [0/0]
+|   |   |   |   RacaCor = Parda : Sim (55.67/6.85) [35.09/5.8]
+|   |   |   |   RacaCor = Amarela : Sim (11.34/1.58) [0.53/0.53]
+|   |   |   |   RacaCor = Preta : Não (2.63/0) [0/0]
+|   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   ComorbidadePulmao = Sim : Não (3.69/0) [2.11/0]
+|   |   |   ComorbidadePulmao = - : Sim (9.76/0) [0/0]
+|   |   FicouInternado = Não : Sim (377.45/113.83) [198.63/52.17]
+|   |   FicouInternado = - : Sim (98.11/39.52) [48.79/19.5]
+|   DificuldadeRespiratoria = Sim
+|   |   Cefaleia = Sim : Sim (179.13/32.67) [105.26/17.39]
+|   |   Cefaleia = Não
+|   |   |   FicouInternado = Sim : Sim (585.79/19.5) [242.76/8.43]
+|   |   |   FicouInternado = Não
+|   |   |   |   Sexo = F
+|   |   |   |   |   RacaCor = Ignorado
+|   |   |   |   |   |   ComorbidadePulmao = Não : Não (2.11/0) [1.05/0]
+|   |   |   |   |   |   ComorbidadePulmao = Sim : Sim (9.76/0) [9.76/0]
+|   |   |   |   |   |   ComorbidadePulmao = - : Sim (0/0) [0/0]
+|   |   |   |   |   RacaCor = Branca
+|   |   |   |   |   |   ComorbidadeCardio = Não : Sim (21.64/2.11) [0.53/0.53]
+|   |   |   |   |   |   ComorbidadeCardio = Sim : Não (4.74/0) [1.58/0]
+|   |   |   |   |   |   ComorbidadeCardio = - : Sim (0/0) [0/0]
+|   |   |   |   |   RacaCor = Parda : Sim (42.74/3.69) [59.64/1.05]
+|   |   |   |   |   RacaCor = Amarela : Sim (11.34/1.58) [0.53/0.53]
+|   |   |   |   |   RacaCor = Preta : Sim (19.53/0) [0.53/0.53]
+|   |   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   |   Sexo = M : Sim (225.87/11.07) [44.32/5.27]
+|   |   |   |   Sexo = I : Sim (0/0) [0/0]
+|   |   |   FicouInternado = -
+|   |   |   |   ComorbidadeObesidade = Não : Sim (86.54/8.43) [53.56/4.74]
+|   |   |   |   ComorbidadeObesidade = Sim : Não (1.05/0) [0.53/0]
+|   |   |   |   ComorbidadeObesidade = - : Sim (9.76/0) [1.05/1.05]
+|   |   Cefaleia = - : Sim (39.58/0.53) [0/0]
+|   DificuldadeRespiratoria = - : Não (1.58/0) [0/0]
+FaixaEtaria = 0 a 4 anos : Não (74.33/19.53) [18.97/0]
+FaixaEtaria = 80 a 89 anos
+|   DificuldadeRespiratoria = Não
+|   |   FicouInternado = Sim : Sim (186.81/11.07) [151.2/4.74]
+|   |   FicouInternado = Não
+|   |   |   DorGarganta = Não
+|   |   |   |   ComorbidadeObesidade = Não
+|   |   |   |   |   RacaCor = Ignorado : Sim (39.3/10.01) [42.74/3.69]
+|   |   |   |   |   RacaCor = Branca
+|   |   |   |   |   |   Cefaleia = Sim
+|   |   |   |   |   |   |   Sexo = F : Não (4.22/0) [1.58/0]
+|   |   |   |   |   |   |   Sexo = M : Sim (11.34/1.58) [0.53/0.53]
+|   |   |   |   |   |   |   Sexo = I : Sim (0/0) [0/0]
+|   |   |   |   |   |   Cefaleia = Não : Sim (76.78/8.43) [32.98/3.69]
+|   |   |   |   |   |   Cefaleia = - : Sim (0/0) [0/0]
+|   |   |   |   |   RacaCor = Parda
+|   |   |   |   |   |   Tosse = Sim : Não (6.32/0) [3.16/0]
+|   |   |   |   |   |   Tosse = Não : Sim (23.74/4.22) [20.05/0.53]
+|   |   |   |   |   |   Tosse = - : Sim (0/0) [0/0]
+|   |   |   |   |   RacaCor = Amarela : Sim (11.87/2.11) [10.82/1.05]
+|   |   |   |   |   RacaCor = Preta : Sim (31.93/2.63) [10.82/1.05]
+|   |   |   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   |   |   ComorbidadeObesidade = Sim : Não (1.05/0) [0/0]
+|   |   |   |   ComorbidadeObesidade = - : Sim (9.76/0) [0/0]
+|   |   |   DorGarganta = Sim : Não (3.69/0) [1.58/0]
+|   |   |   DorGarganta = - : Sim (0/0) [0/0]
+|   |   FicouInternado = - : Sim (122.68/15.28) [34.03/4.74]
+|   DificuldadeRespiratoria = Sim
+|   |   FicouInternado = Sim
+|   |   |   RacaCor = Ignorado : Sim (63.85/5.27) [48.82/0]
+|   |   |   RacaCor = Branca : Sim (142.49/5.8) [90.51/2.63]
+|   |   |   RacaCor = Parda : Sim (109.51/2.11) [87.87/0]
+|   |   |   RacaCor = Amarela : Sim (78.64/0.53) [19.53/0]
+|   |   |   RacaCor = Preta : Sim (69.4/1.05) [20.58/1.05]
+|   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   FicouInternado = Não : Sim (295.52/22.13) [165.7/9.49]
+|   |   FicouInternado = -
+|   |   |   RacaCor = Ignorado : Não (1.05/0) [1.05/0]
+|   |   |   RacaCor = Branca : Sim (30.34/1.05) [1.05/1.05]
+|   |   |   RacaCor = Parda : Sim (39.05/0) [9.76/0]
+|   |   |   RacaCor = Amarela : Sim (21.11/1.58) [0.53/0.53]
+|   |   |   RacaCor = Preta : Sim (9.76/0) [0/0]
+|   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   DificuldadeRespiratoria = - : Sim (11.87/2.11) [0/0]
+FaixaEtaria = 05 a 9 anos : Não (50.34/9.76) [17.39/0]
+FaixaEtaria = 10 a 19 anos : Não (158.1/0) [69.56/0]
+FaixaEtaria = 90 anos ou mais
+|   FicouInternado = Sim : Sim (227.2/2.63) [119.8/2.63]
+|   FicouInternado = Não
+|   |   Tosse = Sim
+|   |   |   RacaCor = Ignorado : Sim (39.58/0.53) [10.82/1.05]
+|   |   |   RacaCor = Branca : Sim (40.64/1.58) [11.87/2.11]
+|   |   |   RacaCor = Parda : Sim (20.05/0.53) [20.05/0.53]
+|   |   |   RacaCor = Amarela : Sim (10.29/0.53) [10.29/0.53]
+|   |   |   RacaCor = Preta : Não (0.53/0) [0.53/0]
+|   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   Tosse = Não : Sim (49.07/10.01) [34.03/4.74]
+|   |   Tosse = - : Sim (0/0) [0/0]
+|   FicouInternado = - : Sim (44.32/5.27) [30.87/1.58]
+
+Size of the tree : 318
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       16372.6888          84.6922 %
+Incorrectly Classified Instances      2959.3112          15.3078 %
+Kappa statistic                          0.6938
+Mean absolute error                      0.218 
+Root mean squared error                  0.3547
+Relative absolute error                 43.6055 %
+Root relative squared error             70.9303 %
+Total Number of Instances            19332     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,862    0,168    0,837      0,862    0,849      0,694    0,881     0,812     Não
+				0,832    0,138    0,857      0,832    0,845      0,694    0,881     0,887     Sim
+Weighted Avg.   0,847    0,153    0,847      0,847    0,847      0,694    0,881     0,849     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 8327.45 1338.55 |       a = Não
+ 1620.76 8045.24 |       b = Sim
+

@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.DecisionTable -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+Relation:     MICRODADOS_obitos_may-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    19332
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Decision Table:
+
+Number of training instances: 19332
+Number of Rules : 159
+Non matches covered by Majority class.
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 124
+	Merit of best subset found:   85.822
+Evaluation (for feature selection): CV (leave one out) 
+Feature set: 1,2,5,17,18
+
+Time taken to build model: 1.87 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       16544.889           85.5829 %
+Incorrectly Classified Instances      2787.111           14.4171 %
+Kappa statistic                          0.7117
+Mean absolute error                      0.2161
+Root mean squared error                  0.3309
+Relative absolute error                 43.226  %
+Root relative squared error             66.1893 %
+Total Number of Instances            19332     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,851    0,139    0,859      0,851    0,855      0,712    0,919     0,916     Não
+				0,861    0,149    0,852      0,861    0,857      0,712    0,919     0,908     Sim
+Weighted Avg.   0,856    0,144    0,856      0,856    0,856      0,712    0,919     0,912     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 8226.27 1439.73 |       a = Não
+ 1347.38 8318.62 |       b = Sim
+

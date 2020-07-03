@@ -1,0 +1,34 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SPegasos -F 0 -L 1.0E-4 -E 500
+Relation:     MICRODADOS_obitos_may-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.SMOTE-C0-K5-P1752.8-S1
+Instances:    36684
+Attributes:   18
+
+Time taken to build model: 3.48 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       33017               90.0038 %
+Incorrectly Classified Instances      3667                9.9962 %
+Kappa statistic                          0.8001
+Mean absolute error                      0.1   
+Root mean squared error                  0.3162
+Relative absolute error                 19.9924 %
+Root relative squared error             63.2335 %
+Total Number of Instances            36684     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,885    0,084    0,913      0,885    0,898      0,800    0,900     0,865     Não
+				0,916    0,115    0,888      0,916    0,902      0,800    0,900     0,855     Sim
+Weighted Avg.   0,900    0,100    0,900      0,900    0,900      0,800    0,900     0,860     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 16224  2118 |     a = Não
+  1549 16793 |     b = Sim
+

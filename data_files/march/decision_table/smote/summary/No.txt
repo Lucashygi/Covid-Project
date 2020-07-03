@@ -1,0 +1,32 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.DecisionTable -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.SMOTE-C0-K5-P1100.0-S1
+Instances:    264
+Attributes:   18
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         250               94.697  %
+Incorrectly Classified Instances        14                5.303  %
+Kappa statistic                          0.8939
+Mean absolute error                      0.1535
+Root mean squared error                  0.2455
+Relative absolute error                 30.6904 %
+Root relative squared error             49.1046 %
+Total Number of Instances              264     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,955    0,061    0,940      0,955    0,947      0,894    0,954     0,952     Não
+				0,939    0,045    0,954      0,939    0,947      0,894    0,954     0,938     Sim
+Weighted Avg.	0,947    0,053    0,947      0,947    0,947      0,894    0,954     0,945     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 126   6 |   a = Não
+   8 124 |   b = Sim
+

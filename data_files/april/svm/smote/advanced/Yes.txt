@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 3.2; 10.06 -0.5]" -S 1 -W weka.classifiers.functions.LibSVM -- -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-9-4" -seed 1
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.SMOTE-C0-K5-P1501.5-S1
+Instances:    7334
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-9-4" -seed 1
+
+Classifier Model
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Cost Matrix
+  0     3.2 
+ 10.06 -0.5 
+
+
+Time taken to build model: 1.21 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        6829               93.1143 %
+Incorrectly Classified Instances       505                6.8857 %
+Kappa statistic                          0.8623
+Mean absolute error                      0.0689
+Root mean squared error                  0.2624
+Relative absolute error                 13.7715 %
+Root relative squared error             52.4814 %
+Total Number of Instances             7334     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,871    0,009    0,990      0,871    0,927      0,869    0,931     0,927     Não
+				0,991    0,129    0,885      0,991    0,935      0,869    0,931     0,882     Sim
+Weighted Avg.   0,931    0,069    0,937      0,931    0,931      0,869    0,931     0,904     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3194  473 |    a = Não
+   32 3635 |    b = Sim
+

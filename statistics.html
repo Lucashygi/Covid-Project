@@ -1,32 +1,151 @@
 <html>
     <head>
         <title>Statistics based in 7 states</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type = 'text/jscript'  src="js/jquery-3.5.1.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script type = 'text/jscript'  src="//code.jquery.com/jquery-3.5.1.js"></script>
-        <link rel='stylesheet' href="/css/bootstrap.min.css">
-        <link rel='stylesheet' href="/css/ml_style.css">
-
-
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel='stylesheet' href="css/bootstrap.min.css">
+        <link rel='stylesheet' href="css/statistic_style.css">
+        <meta charset='ISO-8859-1'/>
+        <style id="__web-inspector-hide-shortcut-style__">
+            .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+            {
+                visibility: hidden !important;
+            }
+        </style>
     </head>
     <body>
+        <div id="header"></div>
+        <div id="content" class='container'>
+            <h3>Statistics</h3>
+            <p>
+                This part is responsible to show some statistic about the Epidemic situation in 7 brazilian states.<br> 
+                <!--                Esta parte é responsável por apresentar algumas estatísticas sobre a situação dos casos em 7 estados brasileiros. <br>-->
+                The states were chosen based on an assessment and comparison of data sets from all 28 federal units in Brazil.<br>  
+                <!--                A seleção foi feita através de uma comparação e avaliação dos conjuntos de dados disponiveis por cada uma das 28 unidades federativas do Brasil. <br>-->
+            </p>
+            <p>
+                To be included in the analysis some attributes were selected, like Sars-Cov-2 positive cases as well for all deaths registered in the state. <br>
 
-        <div id="header">
+                <!--                Utilizando a seleção de alguns atributos, onde eram disponibilizados não apenas dados dos casos positivos para Sars-Cov-2, como também para todos os óbitos registrados na unidade referente.<br>-->
+                Based on this were selected 7 states:<br>
+                <!--                Foram avaliados 7 estados dos quais são:-->
+            </p>
+            <div class='row'>
+                <div class='col-sm-5'>
+                    <ul>
+                        <dt>Center-West</dt>
+                        <li>Mato Grosso do Sul</li>
+                        <dt>North</dt>
+                        <li>Acre</li>
+                        <li>Rondônia</li>
+                        <dt>Northeast</dt>
+                        <li>Ceara</li>
+                        <li>Alagoas</li>
+                        <dt>South</dt>
+                        <li>Santa Catarina</li>
+                        <dt>Southeast</dt>
+                        <li>Espírito Santo</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6" id='states'>
+                    <img src="img/Brazil_States_Map_red.svg.png" id='brazil_states_img'>
+                </div>
+            </div>
+            <br />
+
+            <h5>The following graphs present statistical information about the day May 31, 2020:</h5>
+
+            <h4>Sex</h4>
+            <figure>
+                <img src="img/sex.png" alt="Graph presenting data about deaths per Sex" class='statisticImg'>
+                <figcaption>Data based in 4650 deaths from all 7 states selected.</figcaption>
+            </figure>
+
+            <h4>Symptoms</h4>
+            <figure>
+                <img src="img/symptoms.png" alt="Graph presenting data about Symptons and deaths"  class='statisticImg'>
+                <figcaption>Data based in 1458 deaths. The state of Ceara does not register symptoms in datasets</figcaption>
+            </figure>
+
+            <h4>Ethnicity</h4>
+            <figure>
+                <img src="img/Ethnicity.png" alt="Graph presenting data about deaths per Ethnicity" class='statisticImg'>
+                <figcaption>Data based in 1458 deaths. The state of Ceara does not register positive cases ethnicity.</figcaption>
+            </figure>
+
+            <h4>Age</h4>
+            <figure>
+                <img src="img/age.png" alt="Graph presenting data about deaths per Age"  class='statisticImg'>
+                <figcaption>Data based in 4650 deaths from all 7 states selected. Almost 1/3 is older than 80 years old, presenting us that age is a high risk factor.</figcaption>
+            </figure>
+
+            <h4>Diesases</h4>
+            <figure>
+                <img src="img/diseases.png" alt="Graph presenting data about deaths per Diseases" class='statisticImg'>
+                <figcaption>Data based in 4650 deaths from all 7 states selected. The most common diseases are cardio related (hipertension, cardio diseases).<br> In Respiratory diesases were considered pneumopathies and asthma.<br>Others diseases include chromosomal, smoke, hematological and hepatic. <br> Neurological ones include strokes.</figcaption>
+            </figure>
+
+            <h4>Morbidities</h4>
+            <figure>
+                <img src="img/morbidities.png" alt="Graph presenting data about deaths with morbidities and without"  class='statisticImg'>
+                <figcaption>Data based in 4650 deaths from all 7 states selected. Considering every disease in datasets, this graph present that 57.8% from 4650 deaths did not have any disease. </figcaption>
+            </figure>
+
+
+            <p>
+                The following presentation was build in Power Bi, and present 6 differents graphs.<br>
+                The three firsts are based in 6 states
+            </p>
+            <li>
+                Acre
+            </li>
+            <li>
+                Ceara
+            </li>
+            <li>
+                Espirito Santo
+            </li>
+            <li>
+                Mato Grosso do Sul
+            </li>
+            <li>
+                Santa Catarina
+            </li>
+            <li>
+                Rondonia
+            </li>
+            <p>    
+                The Fouth presents a comparison between deaths and confirmed cases in absolute values, and percentage, per state.<br>
+                The fifth present in a geographic graph the proportions about the disease.<br>
+                And sixth shows how states are being used to present the Brazilian values.
+            </p>
+            <div class="center" align='center' id='powerbi'>
+                <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZjVkNzk3ZGQtNjZkNi00MzJiLWI4N2UtNTI0YzRhNWViM2E1IiwidCI6Ijg0OThhNWY4LTQ5ZmMtNGQ4ZC05YzcxLTkyZmIxZGY4YzkzOCJ9" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+
         </div>
-        <br />
-        <div id="content">
-            Main Content
-            <h1>Statistics</h1>
-        </div>
-        <br />
-
-        <script type="text/jscript">
-            $("#header").load("header.html");
-        </script>
-
-
-
     </body>
+    <script type="text/javascript" class="__web-inspector-hide-shortcut-style__">
+        loadDoc("header.html", "#header");
+
+        function loadDoc(html_file, target)
+        {
+            var el = document.querySelector(target);
+
+            //Se o elemento não existir então não requisita
+            if (!el) return;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", html_file, true);
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300){
+                    el.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(null);
+        }
+    </script>
 </html>

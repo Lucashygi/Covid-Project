@@ -1,0 +1,32 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27
+Instances:    3896
+Attributes:   18
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3711               95.2515 %
+Incorrectly Classified Instances       185                4.7485 %
+Kappa statistic                          0.505 
+Mean absolute error                      0.0652
+Root mean squared error                  0.1892
+Relative absolute error                 58.8175 %
+Root relative squared error             80.4438 %
+Total Number of Instances             3896     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,984    0,546    0,967      0,984    0,975      0,513    0,921     0,987     Não
+                 0,454    0,016    0,634      0,454    0,529      0,513    0,921     0,560     Sim
+Weighted Avg.    0,953    0,515    0,947      0,953    0,949      0,513    0,921     0,962     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3607   60 |    a = Não
+  125  104 |    b = Sim
+

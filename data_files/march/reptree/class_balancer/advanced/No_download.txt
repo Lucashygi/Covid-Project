@@ -1,0 +1,80 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    143
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+REPTree
+============
+
+FaixaEtaria = 30 a 39 anos : Não (12.46/0) [19.5/13]
+FaixaEtaria = 50 a 59 anos
+|   DificuldadeRespiratoria = Não : Não (8.13/0) [2.17/0]
+|   DificuldadeRespiratoria = Sim : Sim (27.63/1.63) [1.63/1.63]
+FaixaEtaria = 40 a 49 anos : Não (9.21/0) [12.46/6.5]
+FaixaEtaria = 20 a 29 anos : Não (3.79/0) [4.88/0]
+FaixaEtaria = 60 a 69 anos
+|   ComorbidadeCardio = Não : Não (4.88/0) [0.54/0]
+|   ComorbidadeCardio = Sim : Sim (8.67/2.17) [6.5/0]
+|   ComorbidadeCardio = - : Sim (0/0) [0/0]
+FaixaEtaria = 70 a 79 anos
+|   FicouInternado = Sim : Sim (6.5/0) [1.08/1.08]
+|   FicouInternado = Não : Não (0.54/0) [0.54/0]
+|   FicouInternado = - : Não (2.17/0) [0/0]
+FaixaEtaria = 0 a 4 anos : Não (0.54/0) [0/0]
+FaixaEtaria = 80 a 89 anos : Sim (7.04/0.54) [0/0]
+FaixaEtaria = 05 a 9 anos : Não (0.54/0) [0.54/0]
+FaixaEtaria = 10 a 19 anos : Não (1.08/0) [0/0]
+
+Size of the tree : 19
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         102.375           71.5909 %
+Incorrectly Classified Instances        40.625           28.4091 %
+Kappa statistic                          0.4318
+Mean absolute error                      0.3808
+Root mean squared error                  0.504 
+Relative absolute error                 75.9989 %
+Root relative squared error            100.5524 %
+Total Number of Instances              143     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,795    0,364    0,686      0,795    0,737      0,437    0,661     0,578     Não
+                 0,636    0,205    0,757      0,636    0,691      0,437    0,660     0,671     Sim
+Weighted Avg.    0,716    0,284    0,722      0,716    0,714      0,437    0,661     0,624     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 57 15 |  a = Não
+ 26 46 |  b = Sim
+
