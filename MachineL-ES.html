@@ -23,21 +23,17 @@
         <div id="header">
         </div>
         <div class='container' id="content">
-            <h3>Machine Learning in Espírito Santo Deaths</h3>
-
+            <br>
+            <h3>Machine Learning on Espírito Santo's Deaths</h3>
+            <br>
             <p>
-                This part is responsable for presenting the evolution in some results of Machine Learning algorithms based in the state of Espírito Santo (Brasil) datasets. 
+                This part is responsible for presenting the evolution in some results of Machine Learning algorithms based in the state of Espírito Santo's (Brasil) datasets, 
+                presenting data from the very first case in the state until the end of the months of March, April, May, and June 16, 2020, and using only information referring to biological and symptomatic conditions such as:<br>
             </p>
             <!--
 <p>
 Esta parte é responsável por apresentar a evolução dos resultados de alguns algoritmos de machine learning baseados nos dados do estado do <br> Espírito Santo (Brasil).<br>
 </p>
--->
-            <p>
-                Presenting data selection until March, April, May and until the day June 16, 2020. <br>
-                Using only values referring to biological and symptomatic conditions as presented below:
-            </p>
-            <!--
 <p>
 Apresentando seleções de dados até Março, Abril, Maio e até o dia 19/06/2020.<br>
 Utilizando apenas valores referentes a condições biologicas e sintomáticas sendo elas:
@@ -58,14 +54,17 @@ Utilizando apenas valores referentes a condições biologicas e sintomáticas se
                 <li>Cardio Diseases</li>
                 <li>Kidney Diseases</li>
                 <li>Diabetes Disease</li>
-                <li>Smoking</li>
                 <li>Obesity Disease</li>
-                <li>Confirmed Death</li>                
+                <li>Smoking</li>
+                <li>Hospitalized confirmed<b>***</b></li>
+                <li>Confirmed Death</li>
+                <p></p>
+                <span style="font-family: cursive; font-size: 12px;">***Not included in June</span>
             </ul>
 
             <p>
-                The results were found through algorithms and filters applied in WEKA Workbench.<br>
-                The filter were:
+                The results were found through algorithms and filters applied to WEKA Workbench.<br>
+                <br>   The filters were:
             </p>
             <!--
 <p>
@@ -79,8 +78,8 @@ Os resultados obtidos foram através de algoritmos e filtros aplicados na ferram
             </ul>
             <p>
                 <u>No filtered</u> -> With no filters.<br>
-                <u>Class Balancer</u> -> It balances the weight of the classes, turning them equal.<br>
-                <u>SMOTE</u> -> Build values in the lower class based in neighboors values. (Every cases using SMOTE the filter was applied setting both classes equal).<br>
+                <u>Class Balancer</u> -> It balances the weight of the classes, equaling them out.<br>
+                <u>SMOTE</u> -> It builds values in the lower class based in its neighboors features. (To set both classes equal the filter was applied in every case using SMOTE).<br>
             </p>
             <!--
 <p>
@@ -109,7 +108,7 @@ Os algoritmos utilizados foram os seguintes:
                 <li>REP Tree</li>
             </ul>
             <div class='highlight'>
-                <p><b>SPegasos and SVM Don't have implementation using Class Balancer Without a Cost Matrix</b></p>
+                <p><b>SPegasos and SVM don't have implementation using Class Balancer without a Cost Matrix</b></p>
             </div>
             <p>
                 The Cost Matrices were always the same for all temporal selections, being:
@@ -119,7 +118,6 @@ Os algoritmos utilizados foram os seguintes:
 E as matrizes de custo foram sempre iguais para todas as seleções temporais, sendo elas:
 </p>
 -->
-            <br>
             <br>
             <table>
                 <th>No Filtered</th>

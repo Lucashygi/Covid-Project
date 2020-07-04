@@ -20,72 +20,98 @@
 
             <div id='covid-description'>
                 <h3>Covid-19</h3>
-                <p>Covid-19 is the disease caused by the new coronavirus Sars-Cov-2, discovered in end of 2019.<br>
-                    The acronym means: "Coronavirus Disease 2019".
+                <p>Covid-19 is a disease caused by the new coronavirus Sars-Cov-2, discovered in the end of 2019.<br>
+                    The acronym means: "Coronavirus Disease 2019".<br>
+                    The New virus became a pandemic outbreak in March 2020, affecting more than 180 Countries/Territories, causing more than 10 million cases and 500 thousand deaths, until the beginning of July.<br>
+                    The Brazil's situation has been critic, with more than 1 million cases and 50 thousand deaths.<br>
+                    The project presents the data gathered over time on the growth of the number of deaths in Brazil, using the Machine Learning and statistic results<br>
                 </p>
                 <p></p>
             </div>
             <div id='espirito-santo-description'>
                 <h3>Espírito Santo</h3>
-                <p>The state used to apply some <b>Machine Learning algorithms</b>, is one state among 26 others in Brazil<br>
-                    This choice was based because this state had good data, with substancial features and 
+                <p> This state has been chosen based on its data and substantial features since the beginning of the outbreak, becoming the first state to have Machine Learning algorithms applied to.  
                 </p>
             </div>
-
             <div id="Description">
                 <h3>Brazil</h3>
-                <p>This project intents to present the brazilian situation about Covid-19, the latests outbreak in World.</p>
-            </div>
-
-            <br><br><br>
-            <div class='JohnHopkings'>
-                <iframe width="650" height="400" frameborder="0" scrolling="no" 
-                        marginheight="0" marginwidth="0" title="2019-nCoV" 
-                        src="//arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"
-                        ></iframe>
-                <br>
-                <cite>Credits: Johns Hopkins Center for Systems Science and Engineering</cite>
-            </div>
-            <footer>
-                <div class='row'>
-                    <div class='col-sm-5'>
-                        <figure>
-                            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Instituto_Federal_de_Santa_Catarina_-_Marca_Vertical_2015.svg/1200px-Instituto_Federal_de_Santa_Catarina_-_Marca_Vertical_2015.svg.png' id='ifscLogo'>
-                        </figure>
-                    </div>
-                    <div class='col-sm-2'></div>
-                    <div class='col-sm-4'>
-                        <figure>
-                            <img src ='https://i0.wp.com/www.eurashe.eu/wp-content/uploads/2014/10/university-deusto_logo.jpg?fit=688%2C324&ssl=1' id='deustoLogo'>
-                        </figure>
-                    </div>
-                    <figcaption>Project developed between Instituto Federal de Santa Catarina and Universidad de Deusto.</figcaption>
-                </div>
-            </footer>
-            <br />
+                <p> To present which specific symptoms and diseases were from patients who died of Covid-19, seven states from all 5 regions of Brazil were analyzed. <br>
+                    <br>
+                    The following graphs show
+                </p>
+                <ul>
+                    <ol>Cumulative Cases in the World</ol>
+                    <ol>Total Deaths from Covid-19 in the World</ol>
+                    <ol>Global Map with statistics from all countries and their states</ol>
+                </ul>
         </div>
-        <script type="text/jscript">
-            $("#header").load("header.html");
-        </script>
+        <br><br><br>
+        <div class='graphics'>
+            <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="80%" height="600px">
+            </iframe>
+            <cite>Credits: Our World in Data</cite>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <div class='graphics'>
+            <iframe src="https://ourworldindata.org/grapher/total-deaths-covid-19?country=BRA+ESP+USA" style="width: 80%; height: 600px; border: 0px none;"></iframe>
+            <br>
+            <cite>Credits: Our World in Data</cite>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <div class='graphics'>
+            <iframe width="80%" height="600" frameborder="0" scrolling="no" 
+                    marginheight="0" marginwidth="0" title="2019-nCoV" 
+                    src="//arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632&zoom=true&previewImage=false&scale=true&disable_scroll=false&theme=light"
+                    ></iframe>
+            <br>
+            <cite>Credits: Johns Hopkins Center for Systems Science and Engineering</cite>
+        </div>
+        <footer>
+            <hr>
+            <div class='row'>
+                <div class='col-sm-5'>
+                    <figure>
+                        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Instituto_Federal_de_Santa_Catarina_-_Marca_Vertical_2015.svg/1200px-Instituto_Federal_de_Santa_Catarina_-_Marca_Vertical_2015.svg.png' id='ifscLogo'>
+                    </figure>
+                </div>
+                <div class='col-sm-2'></div>
+                <div class='col-sm-4'>
+                    <figure>
+                        <img src ='https://i0.wp.com/www.eurashe.eu/wp-content/uploads/2014/10/university-deusto_logo.jpg?fit=688%2C324&ssl=1' id='deustoLogo'>
+                    </figure>
+                </div>
+                <figcaption>Project developed between Instituto Federal de Santa Catarina and Universidad de Deusto.</figcaption>
+            </div>
+        </footer>
+        <br />
+        </div>
     </body>
-    <script type="text/javascript" class="__web-inspector-hide-shortcut__">
-        loadDoc("header.html", "#header");
+<script type="text/javascript" class="__web-inspector-hide-shortcut__">
+    loadDoc("header.html", "#header");
 
-        function loadDoc(html_file, target)
-        {
-            var el = document.querySelector(target);
+    function loadDoc(html_file, target)
+    {
+        var el = document.querySelector(target);
 
-            //Se o elemento não existir então não requisita
-            if (!el) return;
+        //Se o elemento não existir então não requisita
+        if (!el) return;
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", html_file, true);
-            xhr.onreadystatechange = function(){
-                if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300){
-                    el.innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send(null);
-        }
-    </script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", html_file, true);
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300){
+                el.innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send(null);
+    }
+</script>
 </html>
