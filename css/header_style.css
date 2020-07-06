@@ -3,22 +3,24 @@ a {
   font-family: sans-serif;
   font-weight: 700;
 }
-
+body{
+  background-image: url('https://www.centraldeconsultas.med.br/wp-content/uploads/2020/05/logocorona.png');
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: auto;
+}
 .jumbotron{
   font-family: sans-serif;
   background-color: rgba(44, 44, 44, 0.99);
   color: white;
 }
+a:hover, #ml_link:hover, #sts_link:hover{
+  color: white;
+  font-weight: 550;
+}
 .lead{
   font-family: sans-serif;
   font-weight: 600;
   margin-left: auto;
-}
-
-body{
-  background-image: url('https://www.centraldeconsultas.med.br/wp-content/uploads/2020/05/logocorona.png');
-  background-color: rgba(0, 0, 0, 0.8);
-  background-size: auto;
 }
 #brazil_map{
   width: 100%;
@@ -28,8 +30,5 @@ body{
 }
 #headerRow{
   height: 150;
-}
-a:hover{
-  color: white;
 }
 
