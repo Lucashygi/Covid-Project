@@ -22,19 +22,13 @@
             <br>
             <h3>Statistics</h3>
             <br>
-
             <p>
                 Here you will find some statistics about the epidemic situation in 7 brazilian states.<br> 
-                <!--                Esta parte é responsável por apresentar algumas estatísticas sobre a situação dos casos em 7 estados brasileiros. <br>-->
                 The states were chosen based on an assessment and data comparison from all 26 states and the Federal District in Brazil.<br>  
-                <!--                A seleção foi feita através de uma comparação e avaliação dos conjuntos de dados disponiveis por cada uma das 28 unidades federativas do Brasil. <br>-->
             </p>
             <p>
-                To be included in the analysis, some attributes were selected, like Sars-Cov-2 positive cases as well as  all deaths registered in each state. <br>
-
-                <!--                Utilizando a seleção de alguns atributos, onde eram disponibilizados não apenas dados dos casos positivos para Sars-Cov-2, como também para todos os óbitos registrados na unidade referente.<br>-->
+                To be included in the analysis, some attributes were selected, like Sars-Cov-2 positive cases as well as all deaths registered in each state. <br>
                 Based on that, the 7 states selected were:<br>
-                <!--                Foram avaliados 7 estados dos quais são:-->
             </p>
             <div class='row'>
                 <div class='col-sm-5'>
@@ -59,79 +53,87 @@
             </div>
             <br />
 
-            <h5>The following graphs present statistical information about until May 31, 2020:</h5>
+            <h5>The following graphs present statistical information about death cases until May 31, 2020:</h5>
             <br>
 
             <h4>Sex</h4>
             <figure>
-                <img src="img/sex.png" alt="Graph presenting data about deaths per Sex" class='statisticImg'>
+                <img src="img/deaths/sex.png" alt="Graph presenting data about deaths per Sex" class='statisticImg'>
                 <figcaption>Data based on 4650 deaths from all the 7 states selected.</figcaption>
             </figure>
             <br>
             <h4>Symptoms</h4>
             <figure>
-                <img src="img/symptoms.png" alt="Graph presenting data about Symptons and deaths"  class='statisticImg'>
+                <img src="img/deaths/symptoms.png" alt="Graph presenting data about Symptons and deaths"  class='statisticImg'>
                 <figcaption>Data based on 1458 deaths. The state of Ceara is not included.</figcaption>
             </figure>
             <br>
             <h4>Ethnicity</h4>
             <figure>
-                <img src="img/Ethnicity.png" alt="Graph presenting data about deaths per Ethnicity" class='statisticImg'>
-                <figcaption>Data based on 1458 deaths. The state of Ceara and Mato Grosso do Sul are not included.</figcaption>
+                <img src="img/deaths/Ethnicity.png" alt="Graph presenting data about deaths per Ethnicity" class='statisticImg'>
+                <figcaption>Data based on 1436 deaths. The state of Ceara and Mato Grosso do Sul are not included.</figcaption>
             </figure>
             <br>
             <h4>Age</h4>
             <figure>
-                <img src="img/age.png" alt="Graph presenting data about deaths per Age"  class='statisticImg'>
+                <img src="img/deaths/age.png" alt="Graph presenting data about deaths per Age"  class='statisticImg'>
                 <figcaption>Data based on 4650 deaths from all the 7 states selected. With almost 1/3 being older than 80 years old, that puts elderlies in the high risk group.</figcaption>
             </figure>
             <br>
             <h4>Diseases</h4>
             <figure>
-                <img src="img/diseases.png" alt="Graph presenting data about deaths per Diseases" class='statisticImg'>
+                <img src="img/deaths/diseases.png" alt="Graph presenting data about deaths per Diseases" class='statisticImg'>
                 <figcaption>Data based on 4650 deaths from all the 7 states selected. The most common diseases are cardio related (hipertension, cardio diseases).<br> In Respiratory diseases, pneumopathies and asthma were considered.<br>Others diseases include chromosomal, smoke, hematological and hepatic. <br> The neurological ones include strokes.</figcaption>
             </figure>
             <br>
             <h4>Morbidities</h4>
             <figure>
-                <img src="img/morbidities.png" alt="Graph presenting data about deaths with morbidities and without"  class='statisticImg'>
+                <img src="img/deaths/morbidities.png" alt="Graph presenting data about deaths with morbidities and without"  class='statisticImg'>
                 <figcaption>Data based on 4650 deaths from all the 7 states selected. Considering every disease in datasets, this graph presents that 57.8% from 4650 deaths did not have any disease. </figcaption>
             </figure>
-
             <br>
-
-            <p>
-                The following presentation was build in Power Bi, and presents 6 different graphs.<br>
-                The three firsts are based in 6 states
-            </p>
-            <li>
-                Acre
-            </li>
-            <li>
-                Ceara
-            </li>
-            <li>
-                Espirito Santo
-            </li>
-            <li>
-                Mato Grosso do Sul
-            </li>
-            <li>
-                Santa Catarina
-            </li>
-            <li>
-                Rondonia
-            </li>
-            <p>    
-                The fouth one presents a comparison between deaths and confirmed cases in absolute values and percentages per state.<br>
-                The fifth presents the proportions about the disease in a geographic graph.<br>
-                Finally, the sixth shows which states are being presented in the graphs.
-            </p>
+            <hr>
             <br>
-            <div class="center" align='center' id='powerbi'>
-                <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZjVkNzk3ZGQtNjZkNi00MzJiLWI4N2UtNTI0YzRhNWViM2E1IiwidCI6Ijg0OThhNWY4LTQ5ZmMtNGQ4ZC05YzcxLTkyZmIxZGY4YzkzOCJ9" frameborder="0" allowFullScreen="true"></iframe>
-            </div>
+            <h5>The following graphs present statistical information about hospitalized cases until May 31, 2020:</h5>
+            <h4>Sex</h4>
+            <figure>
+                <img src="img/hospitalized/sex.png" alt="Graph presenting data about hospitalized per Sex" class='statisticImg'>
+                <figcaption>Data based on 7678 hospitalized from all the 7 states selected.</figcaption>
+            </figure>
+            <br>
+            <h4>Symptoms</h4>
+            <figure>
+                <img src="img/hospitalized/symptoms.png" alt="Graph presenting data about Symptons and hospitalized"  class='statisticImg'>
+                <figcaption>Data based on 2938 hospitalized. The state of Ceara is not included.</figcaption>
 
+            </figure>
+            <br>
+            <h4>Ethnicity</h4>
+            <figure>
+                <img src="img/hospitalized/Ethnicity.png" alt="Graph presenting data about hospitalized per Ethnicity" class='statisticImg'>
+                <figcaption>Data based on 2917 hospitalized. The state of Ceara and Mato Grosso do Sul are not included.</figcaption>
+
+            </figure>
+            <br>
+            <h4>Age</h4>
+            <figure>
+                <img src="img/hospitalized/age.png" alt="Graph presenting data about hospitalized per Age"  class='statisticImg'>
+                <figcaption>Data based on 7678 hospitalized from all the 7 states selected.</figcaption>
+
+            </figure>
+            <br>
+            <h4>Diseases</h4>
+            <figure>
+                <img src="img/hospitalized/diseases.png" alt="Graph presenting data about hospitalized per Diseases" class='statisticImg'>
+                <figcaption>Data based on 7678 hospitalized from all the 7 states selected. The most common diseases are cardio related (hipertension, cardio diseases).<br> In Respiratory diseases, pneumopathies and asthma were considered.<br>Others diseases include chromosomal, smoke, hematological and hepatic. <br> The neurological ones include strokes.</figcaption>
+            </figure>
+            <br>
+            <h4>Morbidities</h4>
+            <figure>
+                <img src="img/hospitalized/morbidities.png" alt="Graph presenting data about hospitalized with morbidities and without"  class='statisticImg'>
+                <figcaption>Data based on 7678 hospitalized from all the 7 states selected.</figcaption>
+            </figure>
+            <br />
         </div>
     </body>
     <script type="text/javascript" class="__web-inspector-hide-shortcut-style__">

@@ -3,10 +3,6 @@
         <title>Machine Learning Espirito Santo</title>
         <script type = 'text/jscript'  src="js/jquery-3.5.1.js"></script>
         <script src="js/machine.js"></script> 
-        <script src="js/autoresize.jquery.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
-        <script src="js/split_text_to_lines_jspdf.js"></script>
-        <!--        <script src='js/jspdf.js'></script>-->
         <link rel='stylesheet' type="text/css" href="css/bootstrap.min.css">
         <link rel='stylesheet' type="text/css" href="css/ml_style.css">
         <link rel="stylesheet" type="text/css" href='css/selection.css'>
@@ -30,15 +26,6 @@
                 This part is responsible for presenting the evolution in some results of Machine Learning algorithms based in the state of Espírito Santo's (Brasil) datasets, 
                 presenting data from the very first case in the state until the end of the months of March, April, May, and June 16, 2020, and using only information referring to biological and symptomatic conditions such as:<br>
             </p>
-            <!--
-<p>
-Esta parte é responsável por apresentar a evolução dos resultados de alguns algoritmos de machine learning baseados nos dados do estado do <br> Espírito Santo (Brasil).<br>
-</p>
-<p>
-Apresentando seleções de dados até Março, Abril, Maio e até o dia 19/06/2020.<br>
-Utilizando apenas valores referentes a condições biologicas e sintomáticas sendo elas:
-</p>
--->
             <ul>
                 <li>Age</li>
                 <li>Sex</li>
@@ -61,16 +48,10 @@ Utilizando apenas valores referentes a condições biologicas e sintomáticas se
                 <p></p>
                 <span style="font-family: cursive; font-size: 12px;">***Not included in June</span>
             </ul>
-
             <p>
                 The results were found through algorithms and filters applied to WEKA Workbench.<br>
                 <br>   The filters were:
             </p>
-            <!--
-<p>
-Os resultados obtidos foram através de algoritmos e filtros aplicados na ferramenta WEKA, sendo os filtros:
-</p>
--->
             <ul>
                 <li>No Filtered</li>
                 <li>Class Balancer</li>
@@ -81,23 +62,9 @@ Os resultados obtidos foram através de algoritmos e filtros aplicados na ferram
                 <u>Class Balancer</u> -> It balances the weight of the classes, equaling them out.<br>
                 <u>SMOTE</u> -> It builds values in the lower class based in its neighboors features. (To set both classes equal the filter was applied in every case using SMOTE).<br>
             </p>
-            <!--
-<p>
-No Filtered -> Sem aplicação de filtros. <br>
-Class Balancer -> Equilibra o peso das classes, tornando-os iguais. <br>
-SMOTE -> Gera valores da classe minoritária baseados nos valores próximos. (Todos os casos com SMOTE o filtro foi aplicado deixando as classes iguais). <br>
-<br>
-</p>
--->
             <p>
                 The algorithms used were the following:
             </p>
-            <!--
-<p>
-Os algoritmos utilizados foram os seguintes:
-</p>
--->
-
             <ul>
                 <li>Decision Table</li>
                 <li>Logistic</li>
@@ -113,11 +80,6 @@ Os algoritmos utilizados foram os seguintes:
             <p>
                 The Cost Matrices were always the same for all temporal selections, being:
             </p>
-            <!--
-<p>
-E as matrizes de custo foram sempre iguais para todas as seleções temporais, sendo elas:
-</p>
--->
             <br>
             <table>
                 <th>No Filtered</th>
@@ -158,7 +120,6 @@ E as matrizes de custo foram sempre iguais para todas as seleções temporais, s
             <br>
             <br>
             <div class="form-group" id='selection-group'>
-
                 <div class='row'>
                     <div class='col-sm-3'>
                         <h3 class='date_label'>Date</h3>
@@ -241,9 +202,7 @@ E as matrizes de custo foram sempre iguais para todas as seleções temporais, s
                     <button type="submit" class="btn btn-primary" id="downloadButton" onclick="downloadFile()">Download</button>
                 </div>
             </div>
-
         </div>
-
     </body>
     <script type="text/javascript" class="__web-inspector-hide-shortcut__">
         loadDoc("header.html", "#header");
