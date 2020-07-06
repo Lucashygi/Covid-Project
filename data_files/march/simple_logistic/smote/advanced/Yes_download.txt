@@ -1,0 +1,80 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 3.2; 10.06 -0.5]" -S 1 -W weka.classifiers.functions.SimpleLogistic -- -I 0 -M 500 -H 50 -W 0.0
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.SMOTE-C0-K5-P1100.0-S1
+Instances:    264
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+
+Classifier Model
+SimpleLogistic:
+
+Class Não :
+2.16 + 
+[FaixaEtaria=50 a 59 anos] * -1.14 +
+[DificuldadeRespiratoria=Sim] * -0.92 +
+[FicouInternado=Sim] * -1.75
+
+Class Sim :
+-2.16 + 
+[FaixaEtaria=50 a 59 anos] * 1.14 +
+[DificuldadeRespiratoria=Sim] * 0.92 +
+[FicouInternado=Sim] * 1.75
+
+
+Cost Matrix
+  0     3.2 
+ 10.06 -0.5 
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         240               90.9091 %
+Incorrectly Classified Instances        24                9.0909 %
+Kappa statistic                          0.8182
+Mean absolute error                      0.1043
+Root mean squared error                  0.2441
+Relative absolute error                 20.8496 %
+Root relative squared error             48.8114 %
+Total Number of Instances              264     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,864    0,045    0,950      0,864    0,905      0,822    0,977     0,974     Não
+                 0,955    0,136    0,875      0,955    0,913      0,822    0,977     0,978     Sim
+Weighted Avg.    0,909    0,091    0,912      0,909    0,909      0,822    0,977     0,976     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 114  18 |   a = Não
+   6 126 |   b = Sim
+

@@ -1,0 +1,103 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SPegasos -F 0 -L 1.0E-4 -E 500
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.SMOTE-C0-K5-P1100.0-S1
+Instances:    264
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+         1.7922 (normalized) FaixaEtaria=30 a 39 anos
+ +       1.6884 (normalized) FaixaEtaria=50 a 59 anos
+ +      -4.4585 (normalized) FaixaEtaria=40 a 49 anos
+ +      -1.4092 (normalized) FaixaEtaria=20 a 29 anos
+ +       4.9341 (normalized) FaixaEtaria=60 a 69 anos
+ +       8.3137 (normalized) FaixaEtaria=70 a 79 anos
+ +       0      (normalized) FaixaEtaria=0 a 4 anos
+ +       0      (normalized) FaixaEtaria=80 a 89 anos
+ +      -0.1515 (normalized) FaixaEtaria=05 a 9 anos
+ +       0      (normalized) FaixaEtaria=10 a 19 anos
+ +       6.0319 (normalized) Sexo=M
+ +       8.5667 (normalized) RacaCor=Ignorado
+ +       5.7789 (normalized) RacaCor=Branca
+ +      -0.4545 (normalized) RacaCor=Parda
+ +      -3.1818 (normalized) RacaCor=Amarela
+ +       0      (normalized) RacaCor=Preta
+ +       3.2817 (normalized) Febre=Não
+ +       5.929  (normalized) DificuldadeRespiratoria=Sim
+ +      -0.125  (normalized) Tosse=Não
+ +      -0.3643 (normalized) Coriza=Não
+ +       0.3574 (normalized) DorGarganta=Sim
+ +      -3.6097 (normalized) Diarreia=Não
+ +       2.5103 (normalized) Cefaleia=Não
+ +       5.9942 (normalized) ComorbidadePulmao=Não
+ +      -0.0758 (normalized) ComorbidadePulmao=Sim
+ +       4.7907 (normalized) ComorbidadePulmao=-
+ +       0.7202 (normalized) ComorbidadeCardio=Não
+ +       4.2888 (normalized) ComorbidadeCardio=Sim
+ +       5.7002 (normalized) ComorbidadeCardio=-
+ +      -1.0899 (normalized) ComorbidadeRenal=Não
+ +       4.7911 (normalized) ComorbidadeRenal=-
+ +       7.008  (normalized) ComorbidadeRenal=Sim
+ +       5.7122 (normalized) ComorbidadeDiabetes=Não
+ +       0.2058 (normalized) ComorbidadeDiabetes=Sim
+ +       4.7911 (normalized) ComorbidadeDiabetes=-
+ +       5.0851 (normalized) ComorbidadeTabagismo=Não
+ +       5.6998 (normalized) ComorbidadeTabagismo=-
+ +      -0.0758 (normalized) ComorbidadeTabagismo=Sim
+ +       5.9185 (normalized) ComorbidadeObesidade=Não
+ +      -0.303  (normalized) ComorbidadeObesidade=Sim
+ +       5.0937 (normalized) ComorbidadeObesidade=-
+ +       5.1611 (normalized) FicouInternado=Sim
+ +       4.6797 (normalized) FicouInternado=Não
+ +       0.8684 (normalized) FicouInternado=-
+ -      46.7908
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         242               91.6667 %
+Incorrectly Classified Instances        22                8.3333 %
+Kappa statistic                          0.8333
+Mean absolute error                      0.0833
+Root mean squared error                  0.2887
+Relative absolute error                 16.6656 %
+Root relative squared error             57.7312 %
+Total Number of Instances              264     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,894    0,061    0,937      0,894    0,915      0,834    0,917     0,890     Não
+				0,939    0,106    0,899      0,939    0,919      0,834    0,917     0,874     Sim
+Weighted Avg.    0,917    0,083    0,918      0,917    0,917      0,834    0,917     0,882     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 118  14 |   a = Não
+   8 124 |   b = Sim
+

@@ -1,0 +1,32 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SPegasos -F 0 -L 1.0E-4 -E 500
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27
+Instances:    143
+Attributes:   18
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         125               87.4126 %
+Incorrectly Classified Instances        18               12.5874 %
+Kappa statistic                          0.1136
+Mean absolute error                      0.1259
+Root mean squared error                  0.3548
+Relative absolute error                 85.3097 %
+Root relative squared error            133.0197 %
+Total Number of Instances              143     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,932    0,818    0,932      0,932    0,932      0,114    0,557     0,931     Não
+                 0,182    0,068    0,182      0,182    0,182      0,114    0,557     0,096     Sim
+Weighted Avg.    0,874    0,760    0,874      0,874    0,874      0,114    0,557     0,867     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 123   9 |   a = Não
+   9   2 |   b = Sim
+

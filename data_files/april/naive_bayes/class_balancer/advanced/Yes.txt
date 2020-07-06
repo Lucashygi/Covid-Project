@@ -1,0 +1,186 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 4.0; 8.0 -0.5]" -S 1 -W weka.classifiers.bayes.NaiveBayes
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    3896
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.bayes.NaiveBayes 
+
+Classifier Model
+Naive Bayes Classifier
+
+                                       Class
+Attribute                                Não                Sim
+                                      (0.36)             (0.64)
+================================================================
+FaixaEtaria
+  30 a 39 anos             435.88157076629716  77.21868995633201
+  50 a 59 anos             215.57217343877565   392.981834061136
+  40 a 49 anos              364.7399945459507  196.9909170305681
+  20 a 29 anos             210.59991273520342  44.55353711790401
+  60 a 69 anos              87.05835833106104  523.6424454148479
+  70 a 79 anos              36.95326970275439  588.9727510917038
+  0 a 4 anos                10.94452140714483                1.0
+  80 a 89 anos             14.769337332969766 501.86567685589586
+  05 a 9 anos              7.5021870739023875                1.0
+  10 a 19 anos             25.478821925279586                1.0
+  90 anos ou mais           4.059852740659945 175.21414847161608
+  [total]                  1413.5600000000422  2504.440000000011
+
+Sexo
+  F                          773.995298609234 1089.8384279475993
+  M                         630.1822197982111 1405.6015720524028
+  I                        1.3824815925824931                1.0
+  [total]                  1405.5600000000418  2496.440000000011
+
+RacaCor
+  Ignorado                 430.14434687755954  578.0843668122278
+  Branca                    428.6144205072295  719.6333624454156
+  Parda                     409.4903408781041  774.0752838427956
+  Amarela                   60.66712844286899 153.43737991266406
+  Preta                     76.34887373875122 262.32122270742417
+  Indigena                  3.294889555494959 11.888384279476002
+  [total]                   1408.560000000042 2499.4400000000105
+
+Febre
+  Sim                        819.893089719135 1721.3647161572064
+  Não                       554.8333460594571  719.6333624454156
+  -                        30.833564221434496  55.44192139738001
+  [total]                  1405.5600000000418  2496.440000000011
+
+DificuldadeRespiratoria
+  Não                      1040.2024870466594  730.5217467248916
+  Sim                       336.0538751022626 1743.1414847161584
+  -                        29.303637851104522 22.776768558952003
+  [total]                  1405.5600000000418  2496.440000000011
+
+Tosse
+  Sim                       923.1631197164121 1547.1505676855907
+  Não                       452.7107608399275  882.9591266375554
+  -                        29.686119443687016  66.33030567685601
+  [total]                  1405.5600000000418  2496.440000000011
+
+Coriza
+  Sim                       539.5340823561568   403.870218340612
+  Não                       835.5748350150178   2037.12786026201
+  -                        30.451082628852003  55.44192139738001
+  [total]                  1405.5600000000418  2496.440000000011
+
+DorGarganta
+  Não                       950.7017943823527 2211.3420087336294
+  Sim                       423.6421598036569 218.76768558952014
+  -                         31.21604581401699  66.33030567685601
+  [total]                  1405.5600000000418  2496.440000000011
+
+Diarreia
+  Sim                      163.17219525497597  196.9909170305681
+  Não                      1210.7892773384579 2222.2303930131056
+  -                        31.598527406599484  77.21868995633201
+  [total]                  1405.5600000000418  2496.440000000011
+
+Cefaleia
+  Sim                       647.0114098718415 425.64698689956396
+  Não                       726.9500627215856  1993.574323144106
+  -                        31.598527406599484  77.21868995633201
+  [total]                  1405.5600000000418  2496.440000000011
+
+ComorbidadePulmao
+  Não                        1317.88412326156  2091.569781659391
+  Sim                       54.92990455413159 349.42829694323206
+  -                         32.74597218434696  55.44192139738001
+  [total]                  1405.5600000000418  2496.440000000011
+
+ComorbidadeCardio
+  Não                      1177.1308971911972  970.0662008733633
+  Sim                      197.59553858739912 1460.0434934497828
+  -                        30.833564221434496  66.33030567685601
+  [total]                  1405.5600000000418  2496.440000000011
+
+ComorbidadeRenal
+  Não                       1364.546877556626  2244.007161572058
+  -                        30.833564221434496  55.44192139738001
+  Sim                      10.179558221979843  196.9909170305681
+  [total]                  1405.5600000000418  2496.440000000011
+
+ComorbidadeDiabetes
+  Não                      1285.3731878920469 1645.1460262008745
+  Sim                       86.67587673847855  784.9636681222715
+  -                         33.51093536951195  66.33030567685601
+  [total]                  1405.5600000000418  2496.440000000011
+
+ComorbidadeTabagismo
+  Não                      1354.2198745568983  2146.011703056772
+  -                         33.51093536951195  77.21868995633201
+  Sim                      17.829190073629714 273.20960698690016
+  [total]                  1405.5600000000418  2496.440000000011
+
+ComorbidadeObesidade
+  Não                      1297.9950804472696  2146.011703056772
+  Sim                       61.04961003545149 284.09799126637614
+  -                         46.51530951731673  66.33030567685601
+  [total]                  1405.5600000000418  2496.440000000011
+
+FicouInternado
+  Sim                      106.94740114535071 1623.3692576419226
+  Não                       931.5777147532273  686.9682096069877
+  -                        367.03488410144575  186.1025327510921
+  [total]                  1405.5600000000418  2496.440000000011
+
+
+
+Cost Matrix
+ 0    4   
+ 8    -0.5
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3438.4557          88.256  %
+Incorrectly Classified Instances       457.5443          11.744  %
+Kappa statistic                          0.7651
+Mean absolute error                      0.1378
+Root mean squared error                  0.3032
+Relative absolute error                 27.5612 %
+Root relative squared error             60.6366 %
+Total Number of Instances             3896     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,866    0,100    0,896      0,866    0,881      0,766    0,947     0,955     Não
+				0,900    0,134    0,870      0,900    0,885      0,766    0,947     0,935     Sim
+Weighted Avg.   0,883    0,117    0,883      0,883    0,883      0,766    0,947     0,945     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 1686.11  261.89 |       a = Não
+  195.65 1752.35 |       b = Sim
+

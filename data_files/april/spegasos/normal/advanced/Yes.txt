@@ -1,0 +1,131 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 4.0; 50.0 -0.5]" -S 1 -W weka.classifiers.functions.SPegasos -- -F 0 -L 1.0E-4 -E 500
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27
+Instances:    3896
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.functions.SPegasos -F 0 -L 1.0E-4 -E 500
+
+Classifier Model
+Loss function: Hinge loss (SVM)
+
+        -1.4176 (normalized) FaixaEtaria=30 a 39 anos
+ +      -0.0873 (normalized) FaixaEtaria=50 a 59 anos
+ +      -0.5779 (normalized) FaixaEtaria=40 a 49 anos
+ +      -1.1974 (normalized) FaixaEtaria=20 a 29 anos
+ +       0.3594 (normalized) FaixaEtaria=60 a 69 anos
+ +       1.2446 (normalized) FaixaEtaria=70 a 79 anos
+ +      -0.9192 (normalized) FaixaEtaria=0 a 4 anos
+ +       1.7471 (normalized) FaixaEtaria=80 a 89 anos
+ +      -0.6385 (normalized) FaixaEtaria=05 a 9 anos
+ +      -1.0318 (normalized) FaixaEtaria=10 a 19 anos
+ +       2.1854 (normalized) FaixaEtaria=90 anos ou mais
+ +      -0.4173 (normalized) Sexo=F
+ +       0.084  (normalized) Sexo=M
+ +       0      (normalized) Sexo=I
+ +      -0.4928 (normalized) RacaCor=Ignorado
+ +      -0.4349 (normalized) RacaCor=Branca
+ +      -0.3298 (normalized) RacaCor=Parda
+ +       0.2637 (normalized) RacaCor=Amarela
+ +      -0.2897 (normalized) RacaCor=Preta
+ +       0.9503 (normalized) RacaCor=Indigena
+ +      -0.4745 (normalized) Febre=Sim
+ +      -0.8092 (normalized) Febre=Não
+ +       0.9504 (normalized) Febre=-
+ +      -0.3417 (normalized) DificuldadeRespiratoria=Não
+ +       0.7721 (normalized) DificuldadeRespiratoria=Sim
+ +      -0.7637 (normalized) DificuldadeRespiratoria=-
+ +      -0.9743 (normalized) Tosse=Sim
+ +      -0.8335 (normalized) Tosse=Não
+ +       1.4745 (normalized) Tosse=-
+ +       0.1259 (normalized) Coriza=Sim
+ +       0.4206 (normalized) Coriza=Não
+ +      -0.8799 (normalized) Coriza=-
+ +       0.4265 (normalized) DorGarganta=Não
+ +      -0.1414 (normalized) DorGarganta=Sim
+ +      -0.6185 (normalized) DorGarganta=-
+ +       0.6063 (normalized) Diarreia=Sim
+ +       0.5798 (normalized) Diarreia=Não
+ +      -1.5195 (normalized) Diarreia=-
+ +      -0.4314 (normalized) Cefaleia=Sim
+ +      -0.0124 (normalized) Cefaleia=Não
+ +       0.1105 (normalized) Cefaleia=-
+ +       0.1498 (normalized) ComorbidadePulmao=Não
+ +       0.2409 (normalized) ComorbidadePulmao=Sim
+ +      -0.724  (normalized) ComorbidadePulmao=-
+ +      -0.2824 (normalized) ComorbidadeCardio=Não
+ +      -0.072  (normalized) ComorbidadeCardio=Sim
+ +       0.0211 (normalized) ComorbidadeCardio=-
+ +      -1.2112 (normalized) ComorbidadeRenal=Não
+ +       1.196  (normalized) ComorbidadeRenal=-
+ +      -0.3181 (normalized) ComorbidadeRenal=Sim
+ +      -0.096  (normalized) ComorbidadeDiabetes=Não
+ +       0.348  (normalized) ComorbidadeDiabetes=Sim
+ +      -0.5854 (normalized) ComorbidadeDiabetes=-
+ +      -0.3789 (normalized) ComorbidadeTabagismo=Não
+ +      -1.2784 (normalized) ComorbidadeTabagismo=-
+ +       1.324  (normalized) ComorbidadeTabagismo=Sim
+ +      -0.4154 (normalized) ComorbidadeObesidade=Não
+ +      -0.0569 (normalized) ComorbidadeObesidade=Sim
+ +       0.1389 (normalized) ComorbidadeObesidade=-
+ +       0.6095 (normalized) FicouInternado=Sim
+ +      -0.5029 (normalized) FicouInternado=Não
+ +      -0.4399 (normalized) FicouInternado=-
+ +       2.4198
+
+Cost Matrix
+  0     4   
+ 50    -0.5 
+
+
+Time taken to build model: 0.35 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3497               89.7587 %
+Incorrectly Classified Instances       399               10.2413 %
+Kappa statistic                          0.4387
+Mean absolute error                      0.1024
+Root mean squared error                  0.32  
+Relative absolute error                 92.3729 %
+Root relative squared error            136.0573 %
+Total Number of Instances             3896     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,902    0,179    0,988      0,902    0,943      0,490    0,862     0,983     Não
+				0,821    0,098    0,344      0,821    0,485      0,490    0,862     0,293     Sim
+Weighted Avg.   0,898    0,174    0,950      0,898    0,916      0,490    0,862     0,943     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3309  358 |    a = Não
+   41  188 |    b = Sim
+

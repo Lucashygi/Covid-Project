@@ -1,0 +1,116 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 4.0; 8.0 -0.5]" -S 1 -W weka.classifiers.functions.SimpleLogistic -- -I 0 -M 500 -H 50 -W 0.0
+Relation:     MICRODADOS_obitos_may-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    19332
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+
+Classifier Model
+SimpleLogistic:
+
+Class Não :
+0.08 + 
+[FaixaEtaria=30 a 39 anos] * 1.09 +
+[FaixaEtaria=50 a 59 anos] * 0.32 +
+[FaixaEtaria=40 a 49 anos] * 0.78 +
+[FaixaEtaria=20 a 29 anos] * 1.24 +
+[FaixaEtaria=70 a 79 anos] * -0.45 +
+[FaixaEtaria=80 a 89 anos] * -0.86 +
+[FaixaEtaria=10 a 19 anos] * 1.66 +
+[FaixaEtaria=90 anos ou mais] * -0.74 +
+[Sexo=M] * -0.26 +
+[RacaCor=Parda] * -0.11 +
+[RacaCor=Amarela] * -0.24 +
+[Febre=Sim] * -0.19 +
+[DificuldadeRespiratoria=Sim] * -0.7 +
+[Coriza=Sim] * 0.15 +
+[DorGarganta=Não] * -0.23 +
+[Cefaleia=Sim] * 0.38 +
+[ComorbidadeRenal=Não] * 0.33 +
+[ComorbidadeDiabetes=Sim] * -0.48 +
+[ComorbidadeObesidade=Sim] * -0.28 +
+[FicouInternado=Sim] * -0.91 +
+[FicouInternado=-] * 0.15
+
+Class Sim :
+-0.08 + 
+[FaixaEtaria=30 a 39 anos] * -1.09 +
+[FaixaEtaria=50 a 59 anos] * -0.32 +
+[FaixaEtaria=40 a 49 anos] * -0.78 +
+[FaixaEtaria=20 a 29 anos] * -1.24 +
+[FaixaEtaria=70 a 79 anos] * 0.45 +
+[FaixaEtaria=80 a 89 anos] * 0.86 +
+[FaixaEtaria=10 a 19 anos] * -1.66 +
+[FaixaEtaria=90 anos ou mais] * 0.74 +
+[Sexo=M] * 0.26 +
+[RacaCor=Parda] * 0.11 +
+[RacaCor=Amarela] * 0.24 +
+[Febre=Sim] * 0.19 +
+[DificuldadeRespiratoria=Sim] * 0.7  +
+[Coriza=Sim] * -0.15 +
+[DorGarganta=Não] * 0.23 +
+[Cefaleia=Sim] * -0.38 +
+[ComorbidadeRenal=Não] * -0.33 +
+[ComorbidadeDiabetes=Sim] * 0.48 +
+[ComorbidadeObesidade=Sim] * 0.28 +
+[FicouInternado=Sim] * 0.91 +
+[FicouInternado=-] * -0.15
+
+
+Cost Matrix
+ 0    4   
+ 8    -0.5
+
+
+Time taken to build model: 4.46 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       16698.4627          86.3773 %
+Incorrectly Classified Instances      2633.5373          13.6227 %
+Kappa statistic                          0.7275
+Mean absolute error                      0.2149
+Root mean squared error                  0.3254
+Relative absolute error                 42.9851 %
+Root relative squared error             65.0878 %
+Total Number of Instances            19332     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,814    0,087    0,904      0,814    0,857      0,731    0,929     0,933     Não
+                 0,913    0,186    0,831      0,913    0,870      0,731    0,929     0,919     Sim
+Weighted Avg.    0,864    0,136    0,867      0,864    0,863      0,731    0,929     0,926     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 7872.14 1793.86 |       a = Não
+  839.67 8826.33 |       b = Sim
+

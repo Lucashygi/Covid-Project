@@ -1,0 +1,47 @@
+#content{
+    background-color: rgba(255, 255, 255, 0.94);
+    font-size: 18px;
+}
+
+ul{
+    padding-top: 10px;
+    margin-left: 20px;
+}
+li{
+    padding:10px;
+    margin-left: 50px;   
+}
+iframe{
+    width: 80%;
+    text-align: center;
+    display: block;
+}
+.statisticImg{
+    width: 70%;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+figcaption{
+    display: block;
+    margin-left: 18%;
+    margin-right: 18%;
+    font-size: 18px;
+    font-family: monospace;
+}
+h4{
+    margin-left: 12%;
+}
+p{
+    margin-left: 15px;
+}
+#brazil_states_img{
+    width: 100%;
+}
+#states{
+    margin-bottom: auto;
+    margin-top: auto;
+}

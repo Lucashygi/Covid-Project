@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 4.0; 50.0 -0.5]" -S 1 -W weka.classifiers.functions.LibSVM -- -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-9-4" -seed 1
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27
+Instances:    3896
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model "C:\\Program Files\\Weka-3-9-4" -seed 1
+
+Classifier Model
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Cost Matrix
+  0     4   
+ 50    -0.5 
+
+
+Time taken to build model: 0.72 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3511               90.1181 %
+Incorrectly Classified Instances       385                9.8819 %
+Kappa statistic                          0.4516
+Mean absolute error                      0.0988
+Root mean squared error                  0.3144
+Relative absolute error                 89.1318 %
+Root relative squared error            133.6491 %
+Total Number of Instances             3896     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,906    0,170    0,988      0,906    0,945      0,502    0,868     0,984     Não
+				0,830    0,094    0,354      0,830    0,497      0,502    0,868     0,304     Sim
+Weighted Avg.   0,901    0,166    0,951      0,901    0,919      0,502    0,868     0,944     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3321  346 |    a = Não
+   39  190 |    b = Sim
+

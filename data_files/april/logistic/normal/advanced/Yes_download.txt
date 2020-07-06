@@ -1,0 +1,203 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 4.0; 50.0 -0.5]" -S 1 -W weka.classifiers.functions.Logistic -- -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27
+Instances:    3896
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+
+Classifier Model
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                               Class
+Variable                                         Não
+====================================================
+FaixaEtaria=30 a 39 anos                      0.8479
+FaixaEtaria=50 a 59 anos                     -0.7703
+FaixaEtaria=40 a 49 anos                     -0.0321
+FaixaEtaria=20 a 29 anos                      0.5129
+FaixaEtaria=60 a 69 anos                     -1.4806
+FaixaEtaria=70 a 79 anos                     -2.8359
+FaixaEtaria=0 a 4 anos                       26.1339
+FaixaEtaria=80 a 89 anos                     -3.9249
+FaixaEtaria=05 a 9 anos                      14.7307
+FaixaEtaria=10 a 19 anos                     66.4357
+FaixaEtaria=90 anos ou mais                  -4.9382
+Sexo=F                                        0.2789
+Sexo=M                                       -0.2845
+Sexo=I                                        8.6505
+RacaCor=Ignorado                              0.2611
+RacaCor=Branca                               -0.0444
+RacaCor=Parda                                 0.0274
+RacaCor=Amarela                              -0.4218
+RacaCor=Preta                                -0.3428
+RacaCor=Indigena                             -1.7473
+Febre=Sim                                    -0.2225
+Febre=Não                                     0.3392
+Febre=-                                      -1.2014
+DificuldadeRespiratoria=Não                   0.9448
+DificuldadeRespiratoria=Sim                  -1.0455
+DificuldadeRespiratoria=-                     1.4911
+Tosse=Sim                                     0.2896
+Tosse=Não                                    -0.1094
+Tosse=-                                      -1.8921
+Coriza=Sim                                    0.1623
+Coriza=Não                                   -0.2197
+Coriza=-                                      0.6568
+DorGarganta=Não                              -0.5102
+DorGarganta=Sim                               0.4822
+DorGarganta=-                                 0.4924
+Diarreia=Sim                                 -0.2374
+Diarreia=Não                                 -0.2452
+Diarreia=-                                    1.9561
+Cefaleia=Sim                                  0.3114
+Cefaleia=Não                                 -0.2275
+Cefaleia=-                                   -0.6938
+ComorbidadePulmao=Não                       -11.5351
+ComorbidadePulmao=Sim                       -11.3682
+ComorbidadePulmao=-                          86.8908
+ComorbidadeCardio=Não                         4.8668
+ComorbidadeCardio=Sim                         4.5227
+ComorbidadeCardio=-                         -91.8322
+ComorbidadeRenal=Não                          0.9505
+ComorbidadeRenal=-                           -2.4097
+ComorbidadeRenal=Sim                         -0.0249
+ComorbidadeDiabetes=Não                       0.3209
+ComorbidadeDiabetes=Sim                      -0.4884
+ComorbidadeDiabetes=-                         0.7554
+ComorbidadeTabagismo=Não                      0.5884
+ComorbidadeTabagismo=-                        0.5689
+ComorbidadeTabagismo=Sim                     -1.1572
+ComorbidadeObesidade=Não                      0.2394
+ComorbidadeObesidade=Sim                     -0.5935
+ComorbidadeObesidade=-                        0.6096
+FicouInternado=Sim                           -1.2175
+FicouInternado=Não                             0.665
+FicouInternado=-                              0.6295
+Intercept                                     6.9442
+
+
+Odds Ratios...
+                                               Class
+Variable                                         Não
+====================================================
+FaixaEtaria=30 a 39 anos                      2.3348
+FaixaEtaria=50 a 59 anos                      0.4629
+FaixaEtaria=40 a 49 anos                      0.9684
+FaixaEtaria=20 a 29 anos                      1.6701
+FaixaEtaria=60 a 69 anos                      0.2275
+FaixaEtaria=70 a 79 anos                      0.0587
+FaixaEtaria=0 a 4 anos         2.2377333943425082E11
+FaixaEtaria=80 a 89 anos                      0.0197
+FaixaEtaria=05 a 9 anos                 2497346.8411
+FaixaEtaria=10 a 19 anos        7.122878883392211E28
+FaixaEtaria=90 anos ou mais                   0.0072
+Sexo=F                                        1.3217
+Sexo=M                                        0.7524
+Sexo=I                                     5712.8494
+RacaCor=Ignorado                              1.2984
+RacaCor=Branca                                0.9565
+RacaCor=Parda                                 1.0278
+RacaCor=Amarela                               0.6559
+RacaCor=Preta                                 0.7098
+RacaCor=Indigena                              0.1742
+Febre=Sim                                     0.8005
+Febre=Não                                     1.4038
+Febre=-                                       0.3008
+DificuldadeRespiratoria=Não                   2.5722
+DificuldadeRespiratoria=Sim                   0.3515
+DificuldadeRespiratoria=-                     4.4421
+Tosse=Sim                                     1.3359
+Tosse=Não                                     0.8964
+Tosse=-                                       0.1508
+Coriza=Sim                                    1.1762
+Coriza=Não                                    0.8028
+Coriza=-                                      1.9286
+DorGarganta=Não                               0.6004
+DorGarganta=Sim                               1.6196
+DorGarganta=-                                 1.6362
+Diarreia=Sim                                  0.7887
+Diarreia=Não                                  0.7826
+Diarreia=-                                    7.0718
+Cefaleia=Sim                                  1.3653
+Cefaleia=Não                                  0.7965
+Cefaleia=-                                    0.4997
+ComorbidadePulmao=Não                              0
+ComorbidadePulmao=Sim                              0
+ComorbidadePulmao=-             5.447725254613247E37
+ComorbidadeCardio=Não                       129.9077
+ComorbidadeCardio=Sim                        92.0794
+ComorbidadeCardio=-                                0
+ComorbidadeRenal=Não                          2.5869
+ComorbidadeRenal=-                            0.0898
+ComorbidadeRenal=Sim                          0.9754
+ComorbidadeDiabetes=Não                       1.3784
+ComorbidadeDiabetes=Sim                       0.6136
+ComorbidadeDiabetes=-                         2.1285
+ComorbidadeTabagismo=Não                      1.8012
+ComorbidadeTabagismo=-                        1.7663
+ComorbidadeTabagismo=Sim                      0.3144
+ComorbidadeObesidade=Não                      1.2705
+ComorbidadeObesidade=Sim                      0.5524
+ComorbidadeObesidade=-                        1.8397
+FicouInternado=Sim                             0.296
+FicouInternado=Não                            1.9445
+FicouInternado=-                              1.8766
+
+
+Cost Matrix
+  0     4   
+ 50    -0.5 
+
+
+Time taken to build model: 0.22 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3515               90.2207 %
+Incorrectly Classified Instances       381                9.7793 %
+Kappa statistic                          0.4461
+Mean absolute error                      0.1343
+Root mean squared error                  0.2684
+Relative absolute error                121.1233 %
+Root relative squared error            114.0989 %
+Total Number of Instances             3896     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,908    0,197    0,987      0,908    0,946      0,492    0,921     0,989     Não
+                 0,803    0,092    0,354      0,803    0,491      0,492    0,921     0,546     Sim
+Weighted Avg.    0,902    0,190    0,949      0,902    0,919      0,492    0,921     0,963     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3331  336 |    a = Não
+   45  184 |    b = Sim
+

@@ -1,0 +1,148 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    3896
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+REPTree
+============
+
+FaixaEtaria = 30 a 39 anos
+|   FicouInternado = Sim
+|   |   RacaCor = Ignorado
+|   |   |   Cefaleia = Sim : Sim (9.04/0.53) [9.04/0.53]
+|   |   |   Cefaleia = Não : Não (5.84/0) [2.12/0]
+|   |   |   Cefaleia = - : Sim (0/0) [0/0]
+|   |   RacaCor = Branca
+|   |   |   DorGarganta = Não : Não (3.19/0) [1.59/0]
+|   |   |   DorGarganta = Sim : Sim (9.57/1.06) [1.06/1.06]
+|   |   |   DorGarganta = - : Sim (0/0) [0/0]
+|   |   RacaCor = Parda : Não (2.66/0) [1.59/0]
+|   |   RacaCor = Amarela : Sim (9.04/0.53) [0.53/0.53]
+|   |   RacaCor = Preta : Sim (10.63/2.12) [0/0]
+|   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   FicouInternado = Não : Não (281.02/8.51) [141.84/0]
+|   FicouInternado = - : Não (113.16/8.51) [61.62/0]
+FaixaEtaria = 50 a 59 anos
+|   DificuldadeRespiratoria = Não : Não (169.49/34.03) [92.45/17.01]
+|   DificuldadeRespiratoria = Sim
+|   |   FicouInternado = Sim : Sim (122.8/12.22) [60.6/9.56]
+|   |   FicouInternado = Não : Sim (82.91/31.87) [43.58/18.06]
+|   |   FicouInternado = -
+|   |   |   RacaCor = Ignorado : Não (1.06/0) [2.12/0]
+|   |   |   RacaCor = Branca : Sim (9.57/1.06) [1.59/1.59]
+|   |   |   RacaCor = Parda : Sim (9.57/1.06) [1.06/1.06]
+|   |   |   RacaCor = Amarela : Não (0.53/0) [0/0]
+|   |   |   RacaCor = Preta : Sim (0/0) [0/0]
+|   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   DificuldadeRespiratoria = - : Não (4.78/0) [2.12/0]
+FaixaEtaria = 40 a 49 anos : Não (478.74/127.6) [179.57/25.52]
+FaixaEtaria = 20 a 29 anos : Não (214.63/17.01) [110.51/17.01]
+FaixaEtaria = 60 a 69 anos
+|   FicouInternado = Sim
+|   |   DificuldadeRespiratoria = Não
+|   |   |   Coriza = Sim : Não (2.66/0) [1.59/0]
+|   |   |   Coriza = Não : Sim (40.93/6.91) [48.91/6.37]
+|   |   |   Coriza = - : Sim (0/0) [0/0]
+|   |   DificuldadeRespiratoria = Sim : Sim (150.99/6.37) [53.16/2.12]
+|   |   DificuldadeRespiratoria = - : Sim (0/0) [0/0]
+|   FicouInternado = Não
+|   |   DificuldadeRespiratoria = Não : Não (38.26/8.51) [23.38/8.51]
+|   |   DificuldadeRespiratoria = Sim
+|   |   |   RacaCor = Ignorado : Sim (27.64/2.12) [1.06/1.06]
+|   |   |   RacaCor = Branca
+|   |   |   |   Febre = Sim : Não (3.72/0) [1.59/0]
+|   |   |   |   Febre = Não : Sim (8.51/0) [0/0]
+|   |   |   |   Febre = - : Sim (0/0) [0/0]
+|   |   |   RacaCor = Parda : Sim (14.35/5.84) [17.54/0.53]
+|   |   |   RacaCor = Amarela : Não (1.06/0) [1.06/0]
+|   |   |   RacaCor = Preta : Não (0.53/0) [0/0]
+|   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   DificuldadeRespiratoria = - : Sim (8.51/0) [0/0]
+|   FicouInternado = - : Sim (62.19/19.66) [20.19/11.69]
+FaixaEtaria = 70 a 79 anos
+|   DificuldadeRespiratoria = Não
+|   |   FicouInternado = Sim
+|   |   |   ComorbidadeDiabetes = Não : Sim (31.89/6.37) [27.11/1.59]
+|   |   |   ComorbidadeDiabetes = Sim : Não (3.19/0) [2.66/0]
+|   |   |   ComorbidadeDiabetes = - : Sim (8.51/0) [0/0]
+|   |   FicouInternado = Não
+|   |   |   RacaCor = Ignorado
+|   |   |   |   ComorbidadeCardio = Não : Não (3.19/0) [0.53/0]
+|   |   |   |   ComorbidadeCardio = Sim : Sim (8.51/0) [10.1/1.59]
+|   |   |   |   ComorbidadeCardio = - : Sim (0/0) [0/0]
+|   |   |   RacaCor = Branca : Sim (20.73/3.72) [9.04/0.53]
+|   |   |   RacaCor = Parda : Sim (10.1/1.59) [2.12/2.12]
+|   |   |   RacaCor = Amarela : Sim (8.51/0) [0/0]
+|   |   |   RacaCor = Preta : Não (0.53/0) [0/0]
+|   |   |   RacaCor = Indigena : Sim (0/0) [0/0]
+|   |   FicouInternado = - : Não (4.78/0) [1.59/0]
+|   DificuldadeRespiratoria = Sim
+|   |   FicouInternado = Sim
+|   |   |   ComorbidadeDiabetes = Não : Sim (110.59/0) [60.61/1.06]
+|   |   |   ComorbidadeDiabetes = Sim
+|   |   |   |   ComorbidadeCardio = Não : Não (2.12/0) [0.53/0]
+|   |   |   |   ComorbidadeCardio = Sim : Sim (61.14/1.59) [17.01/0]
+|   |   |   |   ComorbidadeCardio = - : Sim (0/0) [0/0]
+|   |   |   ComorbidadeDiabetes = - : Sim (8.51/0) [0/0]
+|   |   FicouInternado = Não : Sim (55.82/4.78) [27.64/2.12]
+|   |   FicouInternado = - : Sim (9.57/1.06) [1.06/1.06]
+|   DificuldadeRespiratoria = - : Não (0/0) [1.59/0]
+FaixaEtaria = 0 a 4 anos : Não (6.91/0) [6.91/0]
+FaixaEtaria = 80 a 89 anos : Sim (217.44/13.28) [192.99/5.84]
+FaixaEtaria = 05 a 9 anos : Não (6.37/0) [2.66/0]
+FaixaEtaria = 10 a 19 anos : Não (26.03/0) [7.97/0]
+FaixaEtaria = 90 anos ou mais : Sim (97.82/4.25) [42.53/0]
+
+Size of the tree : 87
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3285.869           84.3396 %
+Incorrectly Classified Instances       610.131           15.6604 %
+Kappa statistic                          0.6868
+Mean absolute error                      0.2178
+Root mean squared error                  0.3645
+Relative absolute error                 43.5514 %
+Root relative squared error             72.9076 %
+Total Number of Instances             3896     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,866    0,179    0,829      0,866    0,847      0,687    0,861     0,774     Não
+				0,821    0,134    0,860      0,821    0,840      0,687    0,861     0,880     Sim
+Weighted Avg.   0,843    0,157    0,844      0,843    0,843      0,687    0,861     0,827     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 1686.64  261.36 |       a = Não
+  348.77 1599.23 |       b = Sim
+

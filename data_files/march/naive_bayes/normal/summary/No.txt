@@ -1,0 +1,32 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27
+Instances:    143
+Attributes:   18
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         134               93.7063 %
+Incorrectly Classified Instances         9                6.2937 %
+Kappa statistic                          0.4402
+Mean absolute error                      0.074 
+Root mean squared error                  0.2422
+Relative absolute error                 50.1502 %
+Root relative squared error             90.8073 %
+Total Number of Instances              143     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,985    0,636    0,949      0,985    0,967      0,463    0,851     0,986     Não
+				0,364    0,015    0,667      0,364    0,471      0,463    0,851     0,500     Sim
+Weighted Avg.	0,937    0,589    0,927      0,937    0,928      0,463    0,851     0,948     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 130   2 |   a = Não
+   7   4 |   b = Sim
+

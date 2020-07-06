@@ -1,0 +1,101 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SimpleLogistic -I 0 -M 500 -H 50 -W 0.0
+Relation:     MICRODADOS_obitos-weka.filters.unsupervised.attribute.Remove-R1-7,11-weka.filters.unsupervised.attribute.Remove-R17-19
+Instances:    33232
+Attributes:   17
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SimpleLogistic:
+
+Class Não :
+2.47 + 
+[FaixaEtaria=60 a 69 anos] * -0.54 +
+[FaixaEtaria=70 a 79 anos] * -0.91 +
+[FaixaEtaria=50 a 59 anos] * -0.17 +
+[FaixaEtaria=80 a 89 anos] * -1.27 +
+[FaixaEtaria=90 anos ou mais] * -1.63 +
+[FaixaEtaria=30 a 39 anos] * 0.36 +
+[FaixaEtaria=20 a 29 anos] * 0.4  +
+[Sexo=M] * -0.19 +
+[RacaCor=Amarela] * -0.24 +
+[Febre=Sim] * -0.14 +
+[DificuldadeRespiratoria=Sim] * -0.77 +
+[Coriza=Não] * -0.17 +
+[DorGarganta=Sim] * 0.26 +
+[Diarreia=Sim] * 0.16 +
+[Cefaleia=Sim] * 0.4  +
+[ComorbidadeRenal=Sim] * -0.6 +
+[ComorbidadeDiabetes=Sim] * -0.43 +
+[ComorbidadeTabagismo=Sim] * -0.3 +
+[ComorbidadeObesidade=Sim] * -0.25
+
+Class Sim :
+-2.47 + 
+[FaixaEtaria=60 a 69 anos] * 0.54 +
+[FaixaEtaria=70 a 79 anos] * 0.91 +
+[FaixaEtaria=50 a 59 anos] * 0.17 +
+[FaixaEtaria=80 a 89 anos] * 1.27 +
+[FaixaEtaria=90 anos ou mais] * 1.63 +
+[FaixaEtaria=30 a 39 anos] * -0.36 +
+[FaixaEtaria=20 a 29 anos] * -0.4 +
+[Sexo=M] * 0.19 +
+[RacaCor=Amarela] * 0.24 +
+[Febre=Sim] * 0.14 +
+[DificuldadeRespiratoria=Sim] * 0.77 +
+[Coriza=Não] * 0.17 +
+[DorGarganta=Sim] * -0.26 +
+[Diarreia=Sim] * -0.16 +
+[Cefaleia=Sim] * -0.4 +
+[ComorbidadeRenal=Sim] * 0.6  +
+[ComorbidadeDiabetes=Sim] * 0.43 +
+[ComorbidadeTabagismo=Sim] * 0.3  +
+[ComorbidadeObesidade=Sim] * 0.25
+
+
+Time taken to build model: 8.41 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       31968               96.1964 %
+Incorrectly Classified Instances      1264                3.8036 %
+Kappa statistic                          0.1829
+Mean absolute error                      0.0588
+Root mean squared error                  0.1717
+Relative absolute error                 80.1147 %
+Root relative squared error             89.6721 %
+Total Number of Instances            33232     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,995    0,879    0,966      0,995    0,981      0,234    0,906     0,995     Não
+                 0,121    0,005    0,505      0,121    0,195      0,234    0,906     0,344     Sim
+Weighted Avg.    0,962    0,846    0,949      0,962    0,951      0,234    0,906     0,970     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 31815   150 |     a = Não
+  1114   153 |     b = Sim
+

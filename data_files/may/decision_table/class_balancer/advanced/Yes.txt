@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 4.0; 8.0 -0.5]" -S 1 -W weka.classifiers.rules.DecisionTable -- -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+Relation:     MICRODADOS_obitos_may-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    19332
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.rules.DecisionTable -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+
+Classifier Model
+Decision Table:
+
+Number of training instances: 19332
+Number of Rules : 159
+Non matches covered by Majority class.
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 122
+	Merit of best subset found:   86.547
+Evaluation (for feature selection): CV (leave one out) 
+Feature set: 1,2,5,17,18
+
+Cost Matrix
+ 0    4   
+ 8    -0.5
+
+
+Time taken to build model: 1.97 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       16400.6191          84.8366 %
+Incorrectly Classified Instances      2931.3809          15.1634 %
+Kappa statistic                          0.6967
+Mean absolute error                      0.217 
+Root mean squared error                  0.3412
+Relative absolute error                 43.3947 %
+Root relative squared error             68.2437 %
+Total Number of Instances            19332     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,809    0,112    0,878      0,809    0,842      0,699    0,914     0,905     Não
+				0,888    0,191    0,823      0,888    0,854      0,699    0,914     0,904     Sim
+Weighted Avg.   0,848    0,152    0,851      0,848    0,848      0,699    0,914     0,905     
+
+=== Confusion Matrix ===
+
+    a       b      <-- classified as
+ 7818.38 1847.62 |       a = Não
+ 1083.76 8582.24 |       b = Sim
+

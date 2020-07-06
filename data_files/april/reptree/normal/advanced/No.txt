@@ -1,0 +1,109 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+Relation:     MICRODADOS_obitos_april-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27
+Instances:    3896
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+REPTree
+============
+
+FaixaEtaria = 30 a 39 anos : Não (746/6) [398/1]
+FaixaEtaria = 50 a 59 anos : Não (379/25) [218/11]
+FaixaEtaria = 40 a 49 anos : Não (676/15) [293/3]
+FaixaEtaria = 20 a 29 anos : Não (374/2) [178/2]
+FaixaEtaria = 60 a 69 anos
+|   FicouInternado = Sim
+|   |   DificuldadeRespiratoria = Não : Não (22/4) [20/5]
+|   |   DificuldadeRespiratoria = Sim
+|   |   |   RacaCor = Ignorado : Não (6/2) [2/0]
+|   |   |   RacaCor = Branca
+|   |   |   |   Febre = Sim : Sim (4/1) [2/0]
+|   |   |   |   Febre = Não : Não (2/0) [0/0]
+|   |   |   |   Febre = - : Sim (0/0) [0/0]
+|   |   |   RacaCor = Parda
+|   |   |   |   Tosse = Sim
+|   |   |   |   |   Cefaleia = Sim : Não (3/1) [1/0]
+|   |   |   |   |   Cefaleia = Não : Sim (4/1) [1/0]
+|   |   |   |   |   Cefaleia = - : Sim (0/0) [0/0]
+|   |   |   |   Tosse = Não : Sim (5/0) [0/0]
+|   |   |   |   Tosse = - : Sim (0/0) [0/0]
+|   |   |   RacaCor = Amarela : Sim (1/0) [2/1]
+|   |   |   RacaCor = Preta : Sim (3/1) [2/0]
+|   |   |   RacaCor = Indigena : Não (1/0) [0/0]
+|   |   DificuldadeRespiratoria = - : Não (0/0) [0/0]
+|   FicouInternado = Não : Não (88/7) [39/3]
+|   FicouInternado = - : Não (42/5) [23/1]
+FaixaEtaria = 70 a 79 anos
+|   DificuldadeRespiratoria = Não : Não (53/9) [25/5]
+|   DificuldadeRespiratoria = Sim
+|   |   FicouInternado = Sim
+|   |   |   ComorbidadeDiabetes = Não : Sim (13/0) [9/2]
+|   |   |   ComorbidadeDiabetes = Sim
+|   |   |   |   ComorbidadeCardio = Não : Não (4/0) [1/0]
+|   |   |   |   ComorbidadeCardio = Sim : Sim (10/3) [2/0]
+|   |   |   |   ComorbidadeCardio = - : Sim (0/0) [0/0]
+|   |   |   ComorbidadeDiabetes = - : Sim (1/0) [0/0]
+|   |   FicouInternado = Não : Não (15/6) [7/3]
+|   |   FicouInternado = - : Não (3/1) [2/0]
+|   DificuldadeRespiratoria = - : Não (0/0) [3/0]
+FaixaEtaria = 0 a 4 anos : Não (13/0) [13/0]
+FaixaEtaria = 80 a 89 anos
+|   DificuldadeRespiratoria = Não : Não (29/10) [15/7]
+|   DificuldadeRespiratoria = Sim : Sim (17/3) [17/3]
+|   DificuldadeRespiratoria = - : Não (3/0) [1/1]
+FaixaEtaria = 05 a 9 anos : Não (12/0) [5/0]
+FaixaEtaria = 10 a 19 anos : Não (49/0) [15/0]
+FaixaEtaria = 90 anos ou mais : Sim (19/8) [5/0]
+
+Size of the tree : 48
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3705               95.0975 %
+Incorrectly Classified Instances       191                4.9025 %
+Kappa statistic                          0.4472
+Mean absolute error                      0.0759
+Root mean squared error                  0.2023
+Relative absolute error                 68.4545 %
+Root relative squared error             86.0078 %
+Total Number of Instances             3896     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,987    0,629    0,962      0,987    0,974      0,466    0,848     0,980     Não
+				0,371    0,013    0,644      0,371    0,471      0,466    0,848     0,425     Sim
+Weighted Avg.   0,951    0,593    0,943      0,951    0,945      0,466    0,848     0,948     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3620   47 |    a = Não
+  144   85 |    b = Sim
+

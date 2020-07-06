@@ -1,0 +1,166 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    143
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                       Class
+Attribute                                Não                Sim
+                                       (0.5)              (0.5)
+================================================================
+FaixaEtaria
+  30 a 39 anos             19.958333333333336               14.0
+  50 a 59 anos              14.54166666666666               27.0
+  40 a 49 anos              16.16666666666666                7.5
+  20 a 29 anos              9.666666666666666                1.0
+  60 a 69 anos              8.583333333333334               14.0
+  70 a 79 anos              5.333333333333333                7.5
+  0 a 4 anos               1.5416666666666665                1.0
+  80 a 89 anos             1.5416666666666665                7.5
+  05 a 9 anos               2.083333333333333                1.0
+  10 a 19 anos              2.083333333333333                1.0
+  [total]                   81.50000000000004               81.5
+
+Sexo
+  F                        34.041666666666686               14.0
+  M                         39.45833333333333               59.5
+  [total]                   73.49999999999997               73.5
+
+RacaCor
+  Ignorado                  49.74999999999995               53.0
+  Branca                    9.666666666666666               20.5
+  Parda                    10.749999999999998                1.0
+  Amarela                   4.791666666666666                1.0
+  Preta                    1.5416666666666665                1.0
+  [total]                                76.5               76.5
+
+Febre
+  Sim                      57.874999999999915               53.0
+  Não                      15.624999999999993               20.5
+  [total]                   73.49999999999997               73.5
+
+DificuldadeRespiratoria
+  Não                       50.83333333333328               14.0
+  Sim                      22.666666666666675               59.5
+  [total]                   73.49999999999997               73.5
+
+Tosse
+  Sim                      56.791666666666586               53.0
+  Não                       16.70833333333333               20.5
+  [total]                   73.49999999999997               73.5
+
+Coriza
+  Sim                       29.16666666666669               14.0
+  Não                       44.33333333333331               59.5
+  [total]                   73.49999999999997               73.5
+
+DorGarganta
+  Não                       44.33333333333331               59.5
+  Sim                       29.16666666666669               14.0
+  [total]                   73.49999999999997               73.5
+
+Diarreia
+  Sim                      10.208333333333332               14.0
+  Não                       63.29166666666656               59.5
+  [total]                   73.49999999999997               73.5
+
+Cefaleia
+  Sim                      30.250000000000025               20.5
+  Não                       43.24999999999998               53.0
+  [total]                   73.49999999999997               73.5
+
+ComorbidadePulmao
+  Não                       70.33333333333327               53.0
+  Sim                      2.6249999999999996                1.0
+  -                        1.5416666666666665               20.5
+  [total]                   74.49999999999999               74.5
+
+ComorbidadeCardio
+  Não                      61.666666666666565               33.5
+  Sim                       11.83333333333333               20.5
+  -                                       1.0               20.5
+  [total]                   74.49999999999999               74.5
+
+ComorbidadeRenal
+  Não                       71.41666666666661               46.5
+  -                        1.5416666666666665               20.5
+  Sim                      1.5416666666666665                7.5
+  [total]                   74.49999999999999               74.5
+
+ComorbidadeDiabetes
+  Não                       67.62499999999991               46.5
+  Sim                       5.333333333333333                7.5
+  -                        1.5416666666666665               20.5
+  [total]                   74.49999999999999               74.5
+
+ComorbidadeTabagismo
+  Não                       71.95833333333329               53.0
+  -                                       1.0               20.5
+  Sim                      1.5416666666666665                1.0
+  [total]                   74.49999999999999               74.5
+
+ComorbidadeObesidade
+  Não                       70.87499999999994               53.0
+  Sim                      2.6249999999999996                7.5
+  -                                       1.0               14.0
+  [total]                   74.49999999999999               74.5
+
+FicouInternado
+  Sim                       16.16666666666666               59.5
+  Não                       26.45833333333335                7.5
+  -                         31.87500000000003                7.5
+  [total]                   74.49999999999999               74.5
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          86.125           60.2273 %
+Incorrectly Classified Instances        56.875           39.7727 %
+Kappa statistic                          0.2045
+Mean absolute error                      0.3388
+Root mean squared error                  0.5194
+Relative absolute error                 67.6033 %
+Root relative squared error            103.6234 %
+Total Number of Instances              143     
+
+=== Detailed Accuracy By Class ===
+
+				TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+				0,932    0,727    0,562      0,932    0,701      0,272    0,818     0,833     Não
+				0,273    0,068    0,800      0,273    0,407      0,272    0,818     0,828     Sim
+Weighted Avg.	0,602    0,398    0,681      0,602    0,554      0,272    0,818     0,831     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 67  5 |  a = Não
+ 52 20 |  b = Sim
+

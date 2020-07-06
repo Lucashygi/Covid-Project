@@ -1,0 +1,169 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     MICRODADOS_obitos-weka.filters.unsupervised.attribute.Remove-R1-7,11-weka.filters.unsupervised.attribute.Remove-R17-19-weka.filters.supervised.instance.SMOTE-C0-K100-P2422.9-S1
+Instances:    63930
+Attributes:   17
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                            Class
+Attribute                     Não     Sim
+                            (0.5)   (0.5)
+==========================================
+FaixaEtaria
+  60 a 69 anos              3088.0  8334.0
+  40 a 49 anos              7431.0   828.0
+  70 a 79 anos              1414.0  7776.0
+  0 a 4 anos                 262.0     4.0
+  50 a 59 anos              5209.0  6154.0
+  80 a 89 anos               585.0  6956.0
+  05 a 9 anos                201.0     2.0
+  90 anos ou mais            114.0  1862.0
+  30 a 39 anos              8471.0    44.0
+  10 a 19 anos               826.0     2.0
+  20 a 29 anos              4375.0    14.0
+  [total]                  31976.0 31976.0
+
+Sexo
+  F                        16795.0  8537.0
+  M                        15163.0 23430.0
+  I                           10.0     1.0
+  [total]                  31968.0 31968.0
+
+RacaCor
+  Branca                   10141.0 13103.0
+  Preta                     1995.0   102.0
+  Amarela                   1816.0   132.0
+  Parda                     9984.0 18215.0
+  Indigena                    35.0     4.0
+  Ignorado                  8000.0   415.0
+  [total]                  31971.0 31971.0
+
+Febre
+  Não                      14649.0  3849.0
+  Sim                      16672.0 28109.0
+  -                          647.0    10.0
+  [total]                  31968.0 31968.0
+
+DificuldadeRespiratoria
+  Não                      24503.0 10789.0
+  Sim                       6823.0 21175.0
+  -                          642.0     4.0
+  [total]                  31968.0 31968.0
+
+Tosse
+  Não                      13431.0  2534.0
+  Sim                      17895.0 29423.0
+  -                          642.0    11.0
+  [total]                  31968.0 31968.0
+
+Coriza
+  Não                      21111.0 31740.0
+  Sim                      10211.0   216.0
+  -                          646.0    12.0
+  [total]                  31968.0 31968.0
+
+DorGarganta
+  Não                      23084.0 31825.0
+  Sim                       8237.0   128.0
+  -                          647.0    15.0
+  [total]                  31968.0 31968.0
+
+Diarreia
+  Não                      26963.0 31839.0
+  Sim                       4359.0   114.0
+  -                          646.0    15.0
+  [total]                  31968.0 31968.0
+
+Cefaleia
+  Não                      16745.0 31474.0
+  Sim                      14575.0   477.0
+  -                          648.0    17.0
+  [total]                  31968.0 31968.0
+
+ComorbidadePulmao
+  Não                      30258.0 31833.0
+  Sim                       1063.0   121.0
+  -                          647.0    14.0
+  [total]                  31968.0 31968.0
+
+ComorbidadeCardio
+  Não                      25327.0 14582.0
+  Sim                       6011.0 17373.0
+  -                          630.0    13.0
+  [total]                  31968.0 31968.0
+
+ComorbidadeRenal
+  Não                      31119.0 30107.0
+  Sim                        210.0  1847.0
+  -                          639.0    14.0
+  [total]                  31968.0 31968.0
+
+ComorbidadeDiabetes
+  Não                      28842.0 21596.0
+  Sim                       2483.0 10358.0
+  -                          643.0    14.0
+  [total]                  31968.0 31968.0
+
+ComorbidadeTabagismo
+  Não                      30867.0 31876.0
+  Sim                        454.0    77.0
+  -                          647.0    15.0
+  [total]                  31968.0 31968.0
+
+ComorbidadeObesidade
+  Não                      29950.0 31837.0
+  Sim                       1276.0   109.0
+  -                          742.0    22.0
+  [total]                  31968.0 31968.0
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       59669               93.3349 %
+Incorrectly Classified Instances      4261                6.6651 %
+Kappa statistic                          0.8667
+Mean absolute error                      0.0739
+Root mean squared error                  0.2188
+Relative absolute error                 14.7846 %
+Root relative squared error             43.7525 %
+Total Number of Instances            63930     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,924    0,058    0,941      0,924    0,933      0,867    0,981     0,981     Não
+                 0,942    0,076    0,926      0,942    0,934      0,867    0,981     0,978     Sim
+Weighted Avg.    0,933    0,067    0,933      0,933    0,933      0,867    0,981     0,979     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 29546  2419 |     a = Não
+  1842 30123 |     b = Sim
+

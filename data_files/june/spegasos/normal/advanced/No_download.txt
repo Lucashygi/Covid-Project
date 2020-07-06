@@ -1,0 +1,117 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SPegasos -F 0 -L 1.0E-4 -E 500
+Relation:     MICRODADOS_obitos-weka.filters.unsupervised.attribute.Remove-R1-7,11-weka.filters.unsupervised.attribute.Remove-R17-19
+Instances:    33232
+Attributes:   17
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+         0.2716 (normalized) FaixaEtaria=60 a 69 anos
+ +       0.2585 (normalized) FaixaEtaria=40 a 49 anos
+ +       0.2778 (normalized) FaixaEtaria=70 a 79 anos
+ +       0.26   (normalized) FaixaEtaria=0 a 4 anos
+ +       0.2671 (normalized) FaixaEtaria=50 a 59 anos
+ +       0.2868 (normalized) FaixaEtaria=80 a 89 anos
+ +       0.2612 (normalized) FaixaEtaria=05 a 9 anos
+ +       0.2963 (normalized) FaixaEtaria=90 anos ou mais
+ +       0.2562 (normalized) FaixaEtaria=30 a 39 anos
+ +       0.2534 (normalized) FaixaEtaria=10 a 19 anos
+ +       0.2576 (normalized) FaixaEtaria=20 a 29 anos
+ +       1.472  (normalized) Sexo=F
+ +       1.4743 (normalized) Sexo=M
+ +       0      (normalized) Sexo=I
+ +       0.4905 (normalized) RacaCor=Branca
+ +       0.4905 (normalized) RacaCor=Preta
+ +       0.4941 (normalized) RacaCor=Amarela
+ +       0.492  (normalized) RacaCor=Parda
+ +       0.4871 (normalized) RacaCor=Indigena
+ +       0.4922 (normalized) RacaCor=Ignorado
+ +       0.9993 (normalized) Febre=Não
+ +       0.9962 (normalized) Febre=Sim
+ +       0.9509 (normalized) Febre=-
+ +       1.0878 (normalized) DificuldadeRespiratoria=Não
+ +       1.102  (normalized) DificuldadeRespiratoria=Sim
+ +       0.7565 (normalized) DificuldadeRespiratoria=-
+ +       1.008  (normalized) Tosse=Não
+ +       1.0079 (normalized) Tosse=Sim
+ +       0.9304 (normalized) Tosse=-
+ +       0.9774 (normalized) Coriza=Não
+ +       0.9783 (normalized) Coriza=Sim
+ +       0.9906 (normalized) Coriza=-
+ +       0.9264 (normalized) DorGarganta=Não
+ +       0.927  (normalized) DorGarganta=Sim
+ +       1.0929 (normalized) DorGarganta=-
+ +       0.923  (normalized) Diarreia=Não
+ +       0.9178 (normalized) Diarreia=Sim
+ +       1.1056 (normalized) Diarreia=-
+ +       0.9714 (normalized) Cefaleia=Não
+ +       0.9645 (normalized) Cefaleia=Sim
+ +       1.0105 (normalized) Cefaleia=-
+ +       0.9798 (normalized) ComorbidadePulmao=Não
+ +       0.9831 (normalized) ComorbidadePulmao=Sim
+ +       0.9834 (normalized) ComorbidadePulmao=-
+ +       0.9886 (normalized) ComorbidadeCardio=Não
+ +       0.9905 (normalized) ComorbidadeCardio=Sim
+ +       0.9672 (normalized) ComorbidadeCardio=-
+ +       0.9744 (normalized) ComorbidadeRenal=Não
+ +       0.9987 (normalized) ComorbidadeRenal=Sim
+ +       0.9732 (normalized) ComorbidadeRenal=-
+ +       0.9783 (normalized) ComorbidadeDiabetes=Não
+ +       0.9792 (normalized) ComorbidadeDiabetes=Sim
+ +       0.9889 (normalized) ComorbidadeDiabetes=-
+ +       0.976  (normalized) ComorbidadeTabagismo=Não
+ +       0.9822 (normalized) ComorbidadeTabagismo=Sim
+ +       0.9883 (normalized) ComorbidadeTabagismo=-
+ +       0.9801 (normalized) ComorbidadeObesidade=Não
+ +       0.9843 (normalized) ComorbidadeObesidade=Sim
+ +       0.982  (normalized) ComorbidadeObesidade=-
+ -      16.037 
+
+Time taken to build model: 3.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       31964               96.1844 %
+Incorrectly Classified Instances      1268                3.8156 %
+Kappa statistic                         -0.0001
+Mean absolute error                      0.0382
+Root mean squared error                  0.1953
+Relative absolute error                 52.0027 %
+Root relative squared error            102.0028 %
+Total Number of Instances            33232     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,962      1,000    0,981      -0,001   0,500     0,962     Não
+                 0,000    0,000    0,000      0,000    0,000      -0,001   0,500     0,038     Sim
+Weighted Avg.    0,962    0,962    0,925      0,962    0,943      -0,001   0,500     0,927     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 31964     1 |     a = Não
+  1267     0 |     b = Sim
+

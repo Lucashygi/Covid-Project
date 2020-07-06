@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <title>Machine Learning Espirito Santo</title>
+        <script type = 'text/jscript'  src="js/jquery-3.5.1.js"></script>
+        <script src="js/machine.js"></script> 
+        <link rel='stylesheet' type="text/css" href="css/bootstrap.min.css">
+        <link rel='stylesheet' type="text/css" href="css/ml_style.css">
+        <link rel="stylesheet" type="text/css" href='css/selection.css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <style id="__web-inspector-hide-shortcut-style__">
+            .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+            {
+                visibility: hidden !important;
+            }
+        </style>
+        <meta charset="ISO-8859-1">
+    </head>
+    <body>
+        <div id="header">
+        </div>
+        <div class='container' id="content">
+            <br>
+            <h3>Machine Learning on Espírito Santo's Deaths</h3>
+            <br>
+            <p>
+                This part is responsible for presenting the evolution in some results of Machine Learning algorithms based in the state of Espírito Santo's (Brasil) datasets, 
+                presenting data from the very first case in the state until the end of the months of March, April, May, and June 16, 2020, and using only information referring to biological and symptomatic conditions such as:<br>
+            </p>
+            <ul>
+                <li>Age</li>
+                <li>Sex</li>
+                <li>Ethnicity</li>
+                <li>Fever</li>
+                <li>Shortness of breath (Dyspnea)</li>
+                <li>Cough</li>
+                <li>Coryza</li>
+                <li>Sore Throat</li>
+                <li>Diarrhea</li>
+                <li>Headache</li>
+                <li>Lung Diseases</li>
+                <li>Cardio Diseases</li>
+                <li>Kidney Diseases</li>
+                <li>Diabetes Disease</li>
+                <li>Obesity Disease</li>
+                <li>Smoking</li>
+                <li>Hospitalized confirmed<b>***</b></li>
+                <li>Confirmed Death</li>
+                <p></p>
+                <span style="font-family: cursive; font-size: 12px;">***Not included in June</span>
+            </ul>
+            <p>
+                The results were found through algorithms and filters applied to WEKA Workbench.<br>
+                <br>   The filters were:
+            </p>
+            <ul>
+                <li>No Filtered</li>
+                <li>Class Balancer</li>
+                <li>SMOTE</li>
+            </ul>
+            <p>
+                <u>No filtered</u> -> With no filters.<br>
+                <u>Class Balancer</u> -> It balances the weight of the classes, equaling them out.<br>
+                <u>SMOTE</u> -> It builds values in the lower class based in its neighboors features. (To set both classes equal the filter was applied in every case using SMOTE).<br>
+            </p>
+            <p>
+                The algorithms used were the following:
+            </p>
+            <ul>
+                <li>Decision Table</li>
+                <li>Logistic</li>
+                <li>Naïve Bayes</li>
+                <li>Simple Logistic</li>
+                <li>SPegasos</li>
+                <li>Support Vector Machine (SVM)</li>
+                <li>REP Tree</li>
+            </ul>
+            <div class='highlight'>
+                <p><b>SPegasos and SVM don't have implementation using Class Balancer without a Cost Matrix</b></p>
+            </div>
+            <p>
+                The Cost Matrices were always the same for all temporal selections, being:
+            </p>
+            <br>
+            <table>
+                <th>No Filtered</th>
+                <th>Matrix</th>
+                <th></th>
+                <tr>
+                    <td>0</td><td>4</td><td><b>No</b></td>
+                </tr>
+                <tr>
+                    <td>50</td><td>-0.5</td><td><b>Yes</b></td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <th>Class Balancer</th>
+                <th>Matrix</th>
+                <th></th>
+                <tr>
+                    <td>0</td><td>4</td><td><b>No</b></td>
+                </tr>
+                <tr>
+                    <td>8</td><td>-0.5</td><td><b>Yes</b></td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <th>SMOTE</th>
+                <th>Matrix</th>
+                <th></th>
+                <tr>
+                    <td>0</td><td>3.2</td><td><b>No</b></td>
+                </tr>
+                <tr>
+                    <td>10.06</td><td>-0.55</td><td><b>Yes</b></td>
+                </tr>
+            </table>
+            <br />
+            <br>
+            <br>
+            <div class="form-group" id='selection-group'>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <h3 class='date_label'>Date</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id='date_selected'form='selection'>
+                            <option value="March" label="March">March</option>
+                            <option value="April" label="April">April</option>
+                            <option value="May" label='May'>May</option>
+                            <option value="June" label="June" selected>June</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <h3 class='algorithm_label'>Algorithm</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id="algorithm_selected" form='selection'>
+                            <option value="Decision Table" label="Decision Table">Decision Table</option>
+                            <option value="Naive Bayes" label="Naive Bayes">Naïve Bayes</option>
+                            <option value="Logistic" label="Logistic">Logistic</option>        
+                            <option value="RepTree" label="RepTree" selected>RepTree</option>
+                            <option value="Simple Logistic" label="Simple Logistic">Simple Logistic</option>
+                            <option value="SPegasos" label="SPegasos">SPegasos</option>
+                            <option value="SVM" label="SVM">Support Vector Machine (SVM)</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <h3 class='filter_label'>Filter</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id='filter_selected' form='selection'>
+                            <option value="Normal" label="Normal">Normal</option>
+                            <option value="Class Balancer" label="Class Balancer">Class Balancer</option>
+                            <option value="SMOTE" label="SMOTE" selected>SMOTE</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class="col-sm-3">
+                        <h3 class='matrix_label'>Cost Matrix</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id='matrix_selected'>
+                            <option value = "No" label="No" selected>No</option>
+                            <option value = "Yes" label="Yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class='row'>
+                    <div class="col-sm-3">
+                        <h3 class='presenting_label'>Presenting type</h3>
+                    </div>
+                    <div class='col-sm-9'>
+                        <select class="custom-select" id="presenting_selected">
+                            <option value = "Summary" label="Summary" selected>Summary</option>
+                            <option value = "Advanced" label="Advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <button type="button" class="btn btn-primary" onclick="showResults()" >Select</button>
+                </div>
+                <br>
+                <br>
+                <div class='form-group' contenteditable>
+                    <textarea id='text_area' class='form-control' readonly placeholder="Select What You Want" accept-charset="ISO-8859-1" >
+                    </textarea>
+                </div>
+                <br>
+                <div class="row" id='pdf-button-row'>
+                    <button type="submit" class="btn btn-primary" id="downloadButton" onclick="downloadFile()">Download</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" class="__web-inspector-hide-shortcut__">
+        loadDoc("header.html", "#header");
+
+        function loadDoc(html_file, target)
+        {
+            var el = document.querySelector(target);
+
+            //Se o elemento não existir então não requisita
+            if (!el) return;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", html_file, true);
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300){
+                    el.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(null);
+        }
+    </script>
+</html>

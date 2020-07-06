@@ -1,0 +1,176 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 4.0; 8.0 -0.5]" -S 1 -W weka.classifiers.bayes.NaiveBayes
+Relation:     MICRODADOS_obitos_march-weka.filters.unsupervised.attribute.Remove-R1-7,11,26-27-weka.filters.supervised.instance.ClassBalancer-num-intervals10
+Instances:    143
+Attributes:   18
+              FaixaEtaria
+              Sexo
+              RacaCor
+              Febre
+              DificuldadeRespiratoria
+              Tosse
+              Coriza
+              DorGarganta
+              Diarreia
+              Cefaleia
+              ComorbidadePulmao
+              ComorbidadeCardio
+              ComorbidadeRenal
+              ComorbidadeDiabetes
+              ComorbidadeTabagismo
+              ComorbidadeObesidade
+              FicouInternado
+              Obito
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.bayes.NaiveBayes 
+
+Classifier Model
+Naive Bayes Classifier
+
+                                       Class
+Attribute                                Não                Sim
+                                      (0.36)             (0.64)
+================================================================
+FaixaEtaria
+  30 a 39 anos             14.650000000000007 17.639999999999997
+  50 a 59 anos             10.750000000000002 34.279999999999994
+  40 a 49 anos             11.920000000000003  9.319999999999999
+  20 a 29 anos             7.2399999999999975                1.0
+  60 a 69 anos              6.459999999999998 17.639999999999997
+  70 a 79 anos                           4.12  9.319999999999999
+  0 a 4 anos                             1.39                1.0
+  80 a 89 anos                           1.39  9.319999999999999
+  05 a 9 anos              1.7799999999999998                1.0
+  10 a 19 anos             1.7799999999999998                1.0
+  [total]                  61.480000000000075 101.51999999999997
+
+Sexo
+  F                         24.79000000000002 17.639999999999997
+  M                        28.690000000000026  75.87999999999998
+  [total]                   53.48000000000006  93.51999999999997
+
+RacaCor
+  Ignorado                  36.10000000000004  67.55999999999999
+  Branca                   7.2399999999999975 25.959999999999994
+  Parda                     8.019999999999998                1.0
+  Amarela                  3.7300000000000004                1.0
+  Preta                                  1.39                1.0
+  [total]                   56.48000000000007  96.51999999999997
+
+Febre
+  Sim                      41.950000000000045  67.55999999999999
+  Não                      11.530000000000003 25.959999999999994
+  [total]                   53.48000000000006  93.51999999999997
+
+DificuldadeRespiratoria
+  Não                       36.88000000000004 17.639999999999997
+  Sim                       16.60000000000001  75.87999999999998
+  [total]                   53.48000000000006  93.51999999999997
+
+Tosse
+  Sim                      41.170000000000044  67.55999999999999
+  Não                      12.310000000000004 25.959999999999994
+  [total]                   53.48000000000006  93.51999999999997
+
+Coriza
+  Sim                      21.280000000000015 17.639999999999997
+  Não                       32.20000000000003  75.87999999999998
+  [total]                   53.48000000000006  93.51999999999997
+
+DorGarganta
+  Não                       32.20000000000003  75.87999999999998
+  Sim                      21.280000000000015 17.639999999999997
+  [total]                   53.48000000000006  93.51999999999997
+
+Diarreia
+  Sim                       7.629999999999997 17.639999999999997
+  Não                       45.85000000000005  75.87999999999998
+  [total]                   53.48000000000006  93.51999999999997
+
+Cefaleia
+  Sim                      22.060000000000016 25.959999999999994
+  Não                       31.42000000000003  67.55999999999999
+  [total]                   53.48000000000006  93.51999999999997
+
+ComorbidadePulmao
+  Não                       50.92000000000006  67.55999999999999
+  Sim                                    2.17                1.0
+  -                                      1.39 25.959999999999994
+  [total]                   54.48000000000006  94.51999999999997
+
+ComorbidadeCardio
+  Não                       44.68000000000005 42.599999999999994
+  Sim                       8.799999999999999 25.959999999999994
+  -                                       1.0 25.959999999999994
+  [total]                   54.48000000000006  94.51999999999997
+
+ComorbidadeRenal
+  Não                       51.70000000000006 59.239999999999995
+  -                                      1.39 25.959999999999994
+  Sim                                    1.39  9.319999999999999
+  [total]                   54.48000000000006  94.51999999999997
+
+ComorbidadeDiabetes
+  Não                      48.970000000000056 59.239999999999995
+  Sim                                    4.12  9.319999999999999
+  -                                      1.39 25.959999999999994
+  [total]                   54.48000000000006  94.51999999999997
+
+ComorbidadeTabagismo
+  Não                       52.09000000000006  67.55999999999999
+  -                                       1.0 25.959999999999994
+  Sim                                    1.39                1.0
+  [total]                   54.48000000000006  94.51999999999997
+
+ComorbidadeObesidade
+  Não                       51.31000000000006  67.55999999999999
+  Sim                                    2.17  9.319999999999999
+  -                                       1.0 17.639999999999997
+  [total]                   54.48000000000006  94.51999999999997
+
+FicouInternado
+  Sim                      11.920000000000003  75.87999999999998
+  Não                      19.330000000000013  9.319999999999999
+  -                        23.230000000000018  9.319999999999999
+  [total]                   54.48000000000006  94.51999999999997
+
+
+
+Cost Matrix
+ 0    4   
+ 8    -0.5
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          97.5             68.1818 %
+Incorrectly Classified Instances        45.5             31.8182 %
+Kappa statistic                          0.3636
+Mean absolute error                      0.3363
+Root mean squared error                  0.5075
+Relative absolute error                 67.1208 %
+Root relative squared error            101.2544 %
+Total Number of Instances              143     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,909    0,545    0,625      0,909    0,741      0,408    0,811     0,826     Não
+                 0,455    0,091    0,833      0,455    0,588      0,408    0,811     0,823     Sim
+Weighted Avg.    0,682    0,318    0,729      0,682    0,664      0,408    0,811     0,824     
+
+=== Confusion Matrix ===
+
+  a     b      <-- classified as
+ 65     6.5  |     a = Não
+ 39    32.5  |     b = Sim
+
