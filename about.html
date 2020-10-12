@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>About</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel='stylesheet' href="/css/about_style.css">
+        <link rel='stylesheet' href="/css/bootstrap.min.css">
+        <meta charset='utf-8'/>
+        <style id="__web-inspector-hide-shortcut-style__">
+            .__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+            {
+                visibility: hidden !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="content" class='container'>
+
+            <br>
+            <h3>About</h3>
+            <p>This project was build intending to describe how was the Covid-19's situation in Brazil (until May 31, 2020) and elaborate a machine learning model to predict deaths based in biological and symptomatological features.
+            </p>
+            <br>
+            <p>It was build during a student exchange program called PROPICIE 17. From Instituto Federal de Santa Catarina (Brazil) in a partnership with Universidad de Deusto (Spain).</p>
+            <br>
+            <p>The student responsable to develop the project is Lucas Pedroso Pereira da Costa. <br>Mentored by the professors: Leonardo Ronald Perin Rauta (Brazil) and Maria Begoña Zapirain (Spain).</p>
+            <footer>
+                <hr>
+                <div class='row'>
+                    <div class='col-sm-5'>
+                        <figure>
+                            <img src='img/logo/IFSC.png' id='ifscLogo'>
+                        </figure>
+                    </div>
+                    <div class='col-sm-2'></div>
+                    <div class='col-sm-4'>
+                        <figure>
+                            <img src ='img/logo/deusto.jpg' id='deustoLogo'>
+                        </figure>
+                    </div>
+                    <figcaption>Project developed between Instituto Federal de Santa Catarina and Universidad de Deusto.</figcaption>
+                </div>
+            </footer>
+        </div>
+    </body>
+    <script type="text/javascript" class="__web-inspector-hide-shortcut-style__">
+        loadDoc("header.html", "#header");
+
+        function loadDoc(html_file, target)
+        {
+            var el = document.querySelector(target);
+
+            //Se o elemento não existir então não requisita
+            if (!el) return;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", html_file, true);
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300){
+                    el.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send(null);
+        }
+    </script>
+</html>
